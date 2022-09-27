@@ -1,0 +1,48 @@
+.page {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.column {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+
+.left-panel {
+    width: 25%; 
+    display: flex;
+    flex-flow: column nowrap; 
+    align-items: center;
+    justify-content: center;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-panel {
+    width: 75%; 
+    display: flex;
+    flex-flow: column nowrap; 
+    align-items: center;
+    justify-content: space-between;
+}
+
+.appbar {
+    width: 100%; 
+    display: flex;
+    flex-flow: row nowrap; 
+    justify-content: center;
+    align-items: center;
+}
+
