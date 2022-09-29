@@ -1,5 +1,5 @@
 .page {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial;
     width: 100%;
 }
 
@@ -17,21 +17,43 @@
 }
 
 .left-panel {
-    width: 25%; 
+    top: 0; 
+    left: 0;
+    position: fixed; 
+    width: 25%;  
+    height: 100%; 
+    background-color: #FF4301;
+}
+
+.left-panel-interior {
+    padding-top: 3%; 
+    color: white;
+    background-color: #FF4301;
     display: flex;
     flex-flow: column nowrap; 
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    height: 98%; 
 }
 
-.centered {
+.centered-bottom {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 18%; 
+    left: 41%;
 }
 
 .right-panel {
-    width: 75%; 
+    width: 75%;
+    height: 100%;
+    position: absolute; 
+    left: 25%; 
+    top: 10%; 
+    bottom: 5%; 
+    background-color: white;
     display: flex;
     flex-flow: column nowrap; 
     align-items: center;
@@ -39,10 +61,60 @@
 }
 
 .appbar {
-    width: 100%; 
+    color: white;
+    top: 0; 
+    right: 0; 
+    position: fixed;
+    width: 75%;
+    height: 10%;
     display: flex;
+    background-color: #FF4301; 
     flex-flow: row nowrap; 
     justify-content: center;
     align-items: center;
 }
 
+.appbar-button {
+    text-decoration: none;
+}
+
+.left-panel-button {
+    text-decoration: none;
+    margin-bottom: 1000px; 
+}
+
+.body-button {
+    text-decoration: none;
+}
+
+.appbar-button:visited, .appbar-button:link, .appbar-button:hover, .appbar-button:focus, .appbar-button:active{
+    color: white;
+}
+
+.left-panel-button:visited, .left-panel-button:link, .left-panel-button:hover, .left-panel-button:focus, .left-panel-button:active{
+    color: white;
+}
+
+.body-button:visited, .body-button:link, .body-button:hover, .body-button:focus, .body-button:active{
+    color: black;
+}
+
+.left-panel-list {
+    list-style: none;
+}
+
+/* .left-panel h1  {
+    color: white; 
+}
+
+.left-panel h2  {
+    color: white; 
+}
+
+.left-panel h3  {
+    color: white; 
+}
+
+.left-panel h4  {
+    color: white; 
+} */
