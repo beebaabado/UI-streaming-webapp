@@ -50,10 +50,10 @@
     width: 75%;
     height: 100%;
     position: absolute; 
-    left: 25%; 
+    left: 25%;
     top: 10%; 
     bottom: 5%; 
-    background-color: white;
+    background-color: #18191a;
     display: flex;
     flex-flow: column nowrap; 
     align-items: center;
@@ -118,3 +118,124 @@
 .left-panel h4  {
     color: white; 
 } */
+
+
+
+/* music grid css */
+* {
+    box-sizing: border-box;
+ }
+
+
+ h1 {
+     width: 100%;
+     text-align: left;
+     margin:0px;
+     padding-top:10px;
+     color:white;
+ }
+
+ .section {padding-left: 10px;}
+
+ .section1 {background-color: #18191A;}
+ .section2 {background-color: #18191A;}
+ .section3{background-color: #18191A;}
+
+ .outer-grid {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-rows: 1fr;
+    position: relative;
+ }
+
+ .outer-grid.scrolly {
+    overflow-x: hidden;
+    overflow-y: auto;
+    white-space: nowrap;
+}
+
+.outer-grid > h1 {
+    width: 100%;
+    text-align: left;
+    margin:0px;
+    padding-top:10px;
+ }
+ 
+ .inner-grid {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /* padding: 0 0 10px 0; */
+    margin: 0px;
+    position: relative;
+ }
+
+ .inner-grid.scrollx {
+   overflow-x: auto;
+   overflow-y: hidden;
+   white-space: nowrap;
+}
+ 
+ .inner-grid > div {padding-left:10px;}
+
+ .label .name {
+     text-align: center;
+     display: block;
+     font-size: 16px;
+     color:white;
+     margin: 0 0 3px 0;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+}
+
+ .label .artist {
+     text-align: center;
+     display: block;
+     color: lightgrey;
+     font-size: 14px;
+     font-weight: normal;
+     margin: 0;
+ }
+ 
+ .inner-grid img {
+     margin-top: 8px;
+     height: 200px;
+     width: 200px; 
+     padding: 10px;
+  }
+  
+  .inner-grid img:hover {opacity:0.5;}
+  .inner-grid img:focus {opacity:0.5;}
+  
+  .inner-grid:hover:after + .play-control-overlay {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 20px;
+    height: 200%;
+    background: blue;
+  }
+
+  .inner-grid img:hover + .play-control-overlay {display: block;} 
+  .inner-grid img:focus + .play-control-overlay {display: block;}
+    
+  .play-control-overlay {
+      display:none;
+      /*width: 200px;*/
+      background-color: red;
+      padding: 5px;
+      border-radius: 25px;
+      position: absolute;
+      top: 60%;
+      zoom: 70%; 
+  }
+  
+  audio{display: none;}
+  
+  audio:hover {
+      display:block;
+      transform: scale(1.1);
+      filter: drop-shadow(2px 3px 3px #333);
+  }
