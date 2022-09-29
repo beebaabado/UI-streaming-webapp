@@ -1,6 +1,14 @@
 .page {
-    font-family: Arial;
+    font-family: 'Trebuchet MS', sans-serif;
     width: 100%;
+}
+
+h1 {
+    width: 100%;
+    text-align: left;
+    margin:0px;
+    padding-top:10px;
+    color:white;
 }
 
 .row {
@@ -127,13 +135,6 @@
  }
 
 
- h1 {
-     width: 100%;
-     text-align: left;
-     margin:0px;
-     padding-top:10px;
-     color:white;
- }
 
  .section {padding-left: 10px;}
 
