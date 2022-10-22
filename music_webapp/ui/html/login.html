@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Log In</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" type="text/css" href="../css/login.css" />
+    <script src="../js/login.js"></script>
+  </head>
+
+  <body onload="checkCookie()">
+    
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1>Login Page</h1>
+      </div>
+    </div>
+
+    <br /><br /><br /><br />
+    <div class="text-center">
+      <a
+        href="#myModal"
+        class="btn btn-info"
+        data-toggle="modal"
+        onclick="openModal()"
+        >Sign Up!</a
+      >
+    </div>
+
+    <!-- add fake buttons to register with google or facebook -->
+
+    <!-- Modal HTML -->
+    <div id="myModal" class="modal fade">
+      <div class="modal-dialog modal-login">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="avatar">
+              <img
+                src="https://www.tutorialrepublic.com/examples/images/avatar.png"
+                alt="Avatar"
+              />
+            </div>
+            <h4 class="modal-title">Sign Up page</h4>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-hidden="true"
+            >
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="username"
+                  placeholder="Username"
+                  required="required"
+                />
+            </div>
+            <div class="form-group">
+                <input
+                  id="psw"
+                  type="password"
+                  class="form-control"
+                  name="password"
+                  placeholder="Password"
+                  required="required"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  id="cpsw"
+                  type="password"
+                  class="form-control"
+                  name="confirm password"
+                  placeholder="Confirm Password"
+                  required="required"
+                />
+              </div>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                name="firstName"
+                placeholder="First Name"
+                required="required"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                name="lastName"
+                placeholder="Last Name"
+                required="required"
+              />
+            </div>
+
+            <!--add verification of format -- name@domain.extension-->
+            <div class="form-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  name="email"
+                  placeholder="Email"
+                  required="required"
+                />
+            </div>
+
+            <!-- add verification of format -- dd/mm/yyyy -->
+            <div class="form-group">
+                <input
+                  type="date"
+                  class="form-control"
+                  name="dob"
+                  placeholder="Date of Birth"
+                  required="required"
+                />
+            </div>
+
+            <div class="form-group">
+                <input
+                  type="image"
+                  class="form-control"
+                  name="profile-picture"
+                  placeholder="Profile Picture(Optional)"
+                />
+            </div>
+            
+
+            <!--add terms of use and checkbox for read and accepted terms of use, add vailidity -->
+            <div class="form-group">
+                I have read and accepted the <a href="#terms">Terms of Use</a>.
+                <input
+                  type="checkbox"
+                  class="form-control"
+                  name="terms-accepted"
+                  placeholder="terms"
+                />
+            </div>
+
+            <div class="form-group">
+              <button
+                id="my_submit_button"
+                class="btn btn-primary btn-block login-btn"
+                disabled
+                onclick = "onClickFunction()"
+              >
+                Sign Up
+              </button>
+            </div>
+
+            <div class="form-group">
+              <button
+                id="delete_button"
+                type = reset
+                class="btn btn-primary btn-block login-btn"
+              >
+                Delete
+              </button>
+          </div>
+            
+
+          </div>
+          <div class="modal-footer">
+            <div id="message" style="display: block">
+              <h5>Password requirements:</h5>
+              <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+              <p id="number" class="invalid">A <b>number</b></p>
+              <p id="length" class="invalid">Maximum<b> 8 characters</b></p>
+              <p id="match" class="invalid">
+                Password and Confirm Password Match
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br /><br /><br />
+  </body>
+</html>

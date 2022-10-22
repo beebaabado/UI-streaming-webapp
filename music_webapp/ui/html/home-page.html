@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <link type="text/css" rel="stylesheet" href="../css/styles.css" media="screen">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://kit.fontawesome.com/b29f472fd9.js" crossorigin="anonymous"></script>
+        <title>Media Player </title>
+    </head>
+    <body >
+    <!-- nav bar parent must be body in order to be sticky using pure CSS -->
+    <nav>
+        <div id="nav-contianer-top" class="flex-nav-container">
+            <div class="logo flex-nav-item-logo">
+                <img  class="logo-image" src="../img/logo.png" alt="logo"> </div>
+            <div class="logo flex-nav-item-logo-title">
+                <h1 class="logo-title">Media Player</h1>
+            </div>
+            <div class="navbar flex-nav-item-menu" >
+                <a href="#LogIn"><i class="fa  fa-sign-in"></i>Login</a>
+                <a href="#SignIn"><i class="fa fa-plus"></i>Sign-Up</a>
+            
+            </div>
+        </div>
+    </nav>    
+
+    <div class=" grid-container">
+                <div class="left-panel">
+                    <div class="left-panel-interior">
+                        <div class="vertical-menu" id="vertical-menu" >
+                            <div class="space"></div>
+                            <a href="#home" class="active"><i class="fa fa-home"></i>Home</a>
+                            <a href="#search"><i class="fa fa-search"></i>Search</a>
+                            <a href="#library"><i class="fa fa-folder"></i>Your Library</a>
+                            <a href="#likedsongs"><i class="fa fa-heart"></i>Liked Songs</a>
+                            <a href="#createplaylist"><i class="fa fa-list"></i>Create Playlist</a>
+                            <a href=#>Privacy Policy</a>
+                            <a href=#>Cookie Policy</a>
+                        </div>
+                        
+                    </div>
+                    <!-- <div class ="helpful-links">
+                        <a class="appbar-button centered-bottom" href=#>Privacy Policy</a>
+                        <a class="appbar-button centered-bottom" href=#>Cookie Policy</a>
+                    </div> -->
+                </div>
+                <div class="right-panel">
+                    <div class="outer-grid scrolly">
+                        <h1 class="section"> Recently Played</h1>
+                        <div class="section inner-grid scrollx">
+                            <div class="img-box">
+                                <div>
+                                    <img src="../img/adultsaretalking.jpg" alt="">
+                                    <audio controls class="play-control-overlay"
+                                        src="../audio/adultsaretalking.mp3">
+                                        Your browser does not support the <code>audio</code> element.
+                                    </audio>
+                                </div>
+                                <div class="label">
+                                    <h3 class = "name">The Adults Are Talking</h3>
+                                    <p class="artist">The Strokes</p>
+                                </div>
+                            </div>
+                    
+                            <div class="img-box">
+                                <div>
+                                    <img src="../img/badfish.jpeg" alt="">
+                                    <audio controls class="play-control-overlay"
+                                        src="../audio/badfish.mp3">
+                                        Your browser does not support the <code>audio</code> element.
+                                    </audio>
+                                </div>
+                                
+                                <div class="label">
+                                    <h3 class = "name">Badfish</h3>
+                                    <p class="artist">Sublime</p>
+                                </div>
+                           </div>
+                    
+                           <div class="img-box">
+                               <div>
+                                   <img src="../img/lithium.jpeg" alt="">
+                                    <audio controls  class="play-control-overlay"
+                                    src="../audio/lithium.mp3">
+                                    Your browser does not support the <code>audio</code> element.
+                                    </audio>
+                                </div>
+                                
+                                <div class="label">
+                                    <h3 class = "name">Lithium</h3>
+                                    <p class="artist">Nirvana</p>
+                                </div>
+                           </div>
+                    
+                           <div class="img-box">
+                                <div>
+                                    <img src="../img/traveller.jpeg" alt="">
+                                    <audio controls  class="play-control-overlay"
+                                        src="../audio/traveller.mp3">
+                                        Your browser does not support the <code>audio</code> element.
+                                    </audio>
+                                </div>
+                                
+                                <div class="label">
+                                    <h3 class = "name">Traveller</h3>
+                                    <p class="artist">Chris Stapleton</p>
+                                </div>
+                           </div>
+                    
+                           <div class="img-box">
+                                <div>
+                                    <img src="../img/stillgoindown.jpeg" alt="">
+                                    <audio controls  class="play-control-overlay"
+                                        src="../audio/stillgoindown.mp3">
+                                        Your browser does not support the <code>audio</code> element.
+                                    </audio>
+                                </div>
+                                
+                                <div class="label">
+                                    <h3 class = "name">Still Goin Down</h3>
+                                    <p class="artist">Morgan Wallen</p>
+                                </div>
+                           </div>
+                        </div>
+
+
+
+                        <h1 class="section"> Discover</h1>
+                        <div class="inner-grid section scrollx">
+                            <div class="img-box">
+                                <div>
+                                    <img src="../img/houstonwegotaproblem.jpeg" alt="">
+                                    <audio controls class="play-control-overlay"
+                                        src="../audio/houstonwegotaproblem.mp3">
+                                        Your browser does not support the <code>audio</code> element.
+                                    </audio>
+                                </div>
+                                
+                                <div class="label">
+                                    <h3 class = "name">Houston, We Got a Problem</h3>
+                                    <p class="artist">Luke Combs</p>
+                                </div>
+                            </div>
+                    
+                            <div class="img-box">
+                                <div>
+                                    <img src="../img/chateau.jpeg" alt="">
+                                    <audio controls class="play-control-overlay"
+                                        src="../audio/chateau.mp3">
+                                        Your browser does not support the <code>audio</code> element.
+                                    </audio>
+                                </div>
+                                <div class="label">
+                                    <h3 class = "name">Chateau(Feel Alright)</h3>
+                                    <p class="artist">Djo</p>
+                                </div>
+                           </div>
+                    
+                           <div class="img-box">
+                                <div>
+                                   <img src="../img/somethingintheorange.jpeg" alt="">
+                                    <audio controls  class="play-control-overlay"
+                                    src="../audio/somethingintheorange.mp3">
+                                    Your browser does not support the <code>audio</code> element.
+                                    </audio>
+                                </div>
+                                
+                                <div class="label">
+                                    <h3 class = "name">Something In The Orange</h3>
+                                    <p class="artist">Zach Bryan</p>
+                                </div>
+                           </div>
+                    
+                           <div class="img-box">
+                               <div>
+                                   <img src="../img/dirtonmyboots.jpeg" alt="">
+                                    <audio controls  class="play-control-overlay"
+                                    src="../audio/dirtonmyboots.mp3">
+                                    Your browser does not support the <code>audio</code> element.
+                                    </audio>
+                                </div>
+                                
+                                <div class="label">
+                                    <h3 class = "name">Dirt On My Boots</h3>
+                                    <p class="artist">Jon Pardi</p>
+                                </div>
+                           </div>
+                    
+                           <div class="img-box">
+                               <div>
+                                   <img src="../img/onmelancholyhill.jpeg" alt="">
+                                    <audio controls  class="play-control-overlay"
+                                    src="../audio/onmelancholyhill.mp3">
+                                    Your browser does not support the <code>audio</code> element.
+                                    </audio>
+                                </div>
+                                
+                                <div class="label">
+                                    <h3 class = "name">On Melancholy Hill</h3>
+                                    <p class="artist">Gorillaz</p>
+                                </div>
+                           </div>
+                        </div>
+                        <h1 class="section"> Your Favorites</h1>
+                        <div class="inner-grid section scrollx">
+                            <div class="img-box">
+                                <div>
+                                    <img src="../img/happyanywhere.jpeg" alt="">
+                                    <audio controls class="play-control-overlay"
+                                        src="../audio/happyanywhere.mp3">
+                                        Your browser does not support the <code>audio</code> element.
+                                    </audio>
+                                </div>  
+                                <div class="label">
+                                    <h3 class = "name">Happy Anywhere</h3>
+                                    <p class="artist">Blake Shelton</p>
+                                </div>
+                            </div>
+                    
+                            <div class="img-box">
+                                <div>
+                                    <img src="../img/justlikeheaven.jpeg" alt="">
+                                    <audio controls class="play-control-overlay"
+                                        src="../audio/justlikeheaven.mp3">
+                                        Your browser does not support the <code>audio</code> element.
+                                    </audio>
+                                </div>
+                                
+                                <div class="label">
+                                    <h3 class = "name">Just Like Heaven</h3>
+                                    <p class="artist">The Cure</p>
+                                </div>
+                           </div>
+                    
+                           <div class="img-box">
+                               <div>
+                                   <img src="../img/someotherbar.jpeg" alt="">
+                                    <audio controls  class="play-control-overlay"
+                                    src="../audio/someotherbar.mp3">
+                                    Your browser does not support the <code>audio</code> element.
+                                    </audio>
+                                </div>
+                                
+                                <div class="label">
+                                    <h3 class = "name">Some Other Bar</h3>
+                                    <p class="artist">Ernest</p>
+                                </div>
+                           </div>
+                    
+                           <div class="img-box">
+                                <div>
+                                    <img src="../img/505.jpeg" alt="">
+                                    <audio controls  class="play-control-overlay"
+                                        src="../audio/505.mp3">
+                                        Your browser does not support the <code>audio</code> element.
+                                    </audio>
+                                </div>
+
+                                <div class="label">
+                                    <h3 class = "name">505</h3>
+                                    <p class="artist">Arctic Monkeys</p>
+                                </div>
+                           </div>
+                    
+                           <div class="img-box">
+                               <div>
+                                   <img src="../img/newslang.jpeg" alt="">
+                                    <audio controls  class="play-control-overlay"
+                                    src="../audio/newslang.mp3">
+                                    Your browser does not support the <code>audio</code> element.
+                                    </audio>
+                                </div>
+                                
+                                <div class="label">
+                                    <h3 class = "name">New Slang</h3>
+                                    <p class="artist">The Shins</p>
+                                </div>
+                           </div>
+                        </div>
+
+                       
+                    </div>
+                    </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="row">
+                <h3><a class="body-button" href=#>Log in.</a> Don't have an account? <a class="body-button" href=#>Sign Up</a></h3>
+            </div>
+        </div>
+    </body>
+
+</html>
