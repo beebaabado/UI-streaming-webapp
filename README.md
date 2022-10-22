@@ -1,1 +1,1 @@
-# UserInterfacesProject1
+# User Interfaces Project: Music Streaming Web App
