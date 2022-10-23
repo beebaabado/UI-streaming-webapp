@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta charset="UTF-8">
-        <link type="text/css" rel="stylesheet" href="../css/styles.css" media="screen">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-        <script src="https://kit.fontawesome.com/b29f472fd9.js" crossorigin="anonymous"></script>
-        <title>Media Player </title>
-    </head>
-    <body >
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Media Player</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+    <script src="../js/home.js"></script>
+  </head>
+    <body>
     <!-- nav bar parent must be body in order to be sticky using pure CSS -->
     <nav>
         <div id="nav-contianer-top" class="flex-nav-container">
@@ -19,7 +43,7 @@
             </div>
             <div class="navbar flex-nav-item-menu" >
                 <a href="#LogIn"><i class="fa  fa-sign-in"></i>Login</a>
-                <a href="#SignIn"><i class="fa fa-plus"></i>Sign-Up</a>
+                <a href="#myModal" class="fa  fa-sign-in" data-toggle="modal" onclick="openModal()"> Sign Up </a>
             
             </div>
         </div>
@@ -30,11 +54,9 @@
                     <div class="left-panel-interior">
                         <div class="vertical-menu" id="vertical-menu" >
                             <div class="space"></div>
-                            <a href="#home" class="active"><i class="fa fa-home"></i>Home</a>
-                            <a href="#search"><i class="fa fa-search"></i>Search</a>
-                            <a href="#library"><i class="fa fa-folder"></i>Your Library</a>
-                            <a href="#likedsongs"><i class="fa fa-heart"></i>Liked Songs</a>
-                            <a href="#createplaylist"><i class="fa fa-list"></i>Create Playlist</a>
+                            <a href="home-page.html" class="active"><i class="fa fa-home"></i>Home</a>
+                            <a href="your-playlists.html"><i class="fa fa-folder"></i>Your Playlists</a>
+                            <a href="#newplaylist"><i class="fa fa-list"></i>Create Playlist</a>
                             <a href=#>Privacy Policy</a>
                             <a href=#>Cookie Policy</a>
                         </div>
@@ -278,17 +300,11 @@
                                 </div>
                            </div>
                         </div>
-
-                       
                     </div>
-                    </div>
+                </div>
             </div>
         </div>
-        <div class="footer">
-            <div class="row">
-                <h3><a class="body-button" href=#>Log in.</a> Don't have an account? <a class="body-button" href=#>Sign Up</a></h3>
-            </div>
-        </div>
+        
     </body>
 
 </html>
