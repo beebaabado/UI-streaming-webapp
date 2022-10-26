@@ -1,7 +1,9 @@
+
+
 .body {
     font-family:  'Trebuchet MS', sans-serif;
     width: 100%;
-    /*-margin: 0px;*/
+    
 }
 
 * {
@@ -27,18 +29,18 @@ one fixed footer */
   
 /* Sticky navigation bar with logo, title and nav menu */
 nav {
-    background-color: black;
-    position:sticky;
-    top: 0px;
-    display:table;
-    z-index: 1000;  /* make sure navbar is top layer */
-    max-height:50px;
-    padding-top:5px;
-  }
-   
+  background-color: black;
+  position:sticky;
+  top: 0px;
+  display:table;
+  z-index: 1000;  /* make sure navbar is top layer */
+  max-height:50px;
+  padding-top:5px;
+}
+ 
 .flex-nav-container {
-    display:flex;
-    width:100%;
+  display:flex;
+  width:100%;
 }
 
 .flex-nav-item-logo {
@@ -77,6 +79,11 @@ nav {
     width:30px;
   } */
 
+  #align-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
 
 /* Add a background color on mouse-over */
 .navbar a:hover {color: red;}
