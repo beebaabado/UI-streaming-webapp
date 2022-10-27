@@ -41,11 +41,19 @@
             <div class="logo flex-nav-item-logo-title">
                 <h1 class="logo-title">Media Player</h1>
             </div>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2 flex-nav-item-menu" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0 flex-nav-item-menu" type="submit">Search</button>
-            </form>
-            <div ><img class="flex-nav-item-profile" src = "https://cdn.icon-icons.com/icons2/1378/PNG/512/avatardefault_92824.png" ></img></div>
+
+            <div class="wrapper">
+                <input class = "toggler" id="toggler" type="checkbox">
+                <label for="toggler">
+                  <img class="flex-nav-item-profile" src="https://cdn.icon-icons.com/icons2/1378/PNG/512/avatardefault_92824.png" alt="">
+                </label>
+                <div class="dropdown">
+                  <a href="account.html">Account</a>
+                  <a href="profile.html">Profile</a>
+                  <a href="#">Log Out</a>
+                </div>
+              </div>
+            
         </div>
     </nav>  
     
