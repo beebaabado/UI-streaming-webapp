@@ -36,18 +36,53 @@
   </head>
     <body>
         <nav>
-            
-        </nav>    
-                            <h1>Your Playlists</h1><br>
-                            <div class="section inner-grid scrollx">
-                                <div class="img-box">
-                                    <div>
-                                        <img src="https://i.pinimg.com/736x/c9/b1/53/c9b1535a909b48cfb5ce86dfaf400ffa--purple-hearts-vinyl-wall-decals.jpg" alt="">
-                                    </div>
-                                    <div class="label">
-                                        <h3 class = "name">Liked Songs</h3>
-                                    </div>
+            <div id="nav-contianer-top" class="flex-nav-container">
+                <div class="logo flex-nav-item-logo">
+                    <img  class="logo-image" src="../img/logo.png" alt="logo"> </div>
+                <div class="logo flex-nav-item-logo-title">
+                    <h1 class="logo-title">Media Player</h1>
+                </div>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+                <div ><i class="fa fa-user flex-nav-item-menu"></i></div>
+            </div>
+        </nav>  
+        
+        <div class=" grid-container">
+            <div class="left-panel">
+                <div class="left-panel-interior">
+                    <div class="vertical-menu" id="vertical-menu" >
+                        <div class="space"></div>
+                        <a href="home-page.html" class="active"><i class="fa fa-home"></i>Home</a>
+                        <a href="your-playlists.html"><i class="fa fa-folder"></i>Your Playlists</a>
+                        <a href="#newplaylist"><i class="fa fa-list"></i>Create Playlist</a>
+                        <a href=#>Privacy Policy</a>
+                        <a href=#>Cookie Policy</a>
+                    </div>
+                    
+                </div>
+                <!-- <div class ="helpful-links">
+                    <a class="appbar-button centered-bottom" href=#>Privacy Policy</a>
+                    <a class="appbar-button centered-bottom" href=#>Cookie Policy</a>
+                </div> -->
+            </div>
+            <div class="right-panel">
+                <div class="outer-grid scrolly">
+                    <h1>Auto Playlists</h1>
+                        <div class = "section inner-grid scrollx">
+                            <div class="img-box">
+                                <div>
+                                    <img src="https://i.pinimg.com/736x/c9/b1/53/c9b1535a909b48cfb5ce86dfaf400ffa--purple-hearts-vinyl-wall-decals.jpg" alt="">
                                 </div>
+                                <div class="label">
+                                    <h3 class = "name">Liked Songs</h3>
+                                </div>
+                            </div>
+                        </div>
+                    <h1>Your Playlists</h1><br>
+                            <div class="section inner-grid scrollx">
     
                                 <div class="img-box">
                                   <div>
@@ -84,7 +119,21 @@
                                         <h3 class = "name">Playlist 4</h3>
                                     </div>
                                 </div>
+
+                                <div class="img-box">
+                                    <div>
+                                        <img src="https://static.vecteezy.com/system/resources/previews/002/238/014/original/playlist-icon-on-white-line-vector.jpg" alt="">
+                                    </div>
+                                    <div class="label">
+                                        <h3 class = "name">Playlist 5</h3>
+                                    </div>
+                                </div>
                             </div>
+                </div>
+            </div>
+        </div>
+
+                            
     </body>
     <footer>
     </footer>
