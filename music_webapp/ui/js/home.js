@@ -107,7 +107,7 @@ function openModal() {
 
 
 
-  //COUNTDOWN
+//COUNTDOWN
   var countDownDateSamia = new Date("January 27, 2023 00:00:00").getTime();
   var countDownDateInhaler = new Date("February 17, 2023 00:00:00").getTime();
   var countDownDateGorillaz = new Date("February 24, 2023 00:00:00").getTime();
@@ -159,3 +159,12 @@ function openModal() {
       document.getElementById("countDownGorillaz").innerHTML = "OUT NOW";
     }
   }, 1000);
+
+
+
+
+//PLAYLISTS AND LIKED SONGS
+  var myPlaylists = []
+  var likedSongs = []
+
+  

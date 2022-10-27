@@ -30,6 +30,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="../css/login-registration.css" />
     <script src="../js/home.js"></script>
 
 
@@ -44,7 +45,7 @@
                 <h1 class="logo-title">Media Player</h1>
             </div>
             <div class="navbar flex-nav-item-menu" >
-                <a href="#LogIn"><i class="fa  fa-sign-in"></i>Login</a>
+                <a href="#LogIn" class="fa  fa-sign-in"  onclick="document.getElementById('id01').style.display='block'"> Login </a>
                 <a href="#myModal" class="fa  fa-sign-in" data-toggle="modal" onclick="openModal()"> Sign Up </a>
             
             </div>
@@ -59,8 +60,10 @@
                             <a href="home-page.html" class="active"><i class="fa fa-home"></i>Home</a>
                             <a href="your-playlists.html"><i class="fa fa-folder"></i>Your Playlists</a>
                             <a href="newplaylist"><i class="fa fa-list"></i>Create Playlist</a>
-                            <a href=#>Privacy Policy</a>
-                            <a href=#>Cookie Policy</a>
+                            <div id="align-bottom">
+                              <a href=#>Privacy Policy</a>
+                              <a href=#>Cookie Policy</a>
+                          </div>
                         </div>    
                     </div>
                     
@@ -113,8 +116,65 @@
         </div>
     </div>
 
+    <!-- registration modal --> -->
+    <div id="id01" class="modal">
+      <span onclick="document.getElementById('id01').style.display='none'"
+    class="close" title="Close Modal">&times;</span>
 
-    <!----> modal -->
+      <!-- Modal Content -->
+      <form class="modal-content animate" action="/action_page.php">
+        <div class="imgcontainer">
+          <img src="https://www.tutorialrepublic.com/examples/images/avatar.png" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+
+          <button type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+    </div>
+
+    <div id="myModal" class="modal fade">
+      <div class="modal-dialog modal-login">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="avatar">
+              <img
+                src="https://www.tutorialrepublic.com/examples/images/avatar.png"
+                alt="Avatar"
+              />
+            </div>
+            <h4 class="modal-title">Sign Up</h4>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-hidden="true"
+            >
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!----> registration modal -->
     <div id="myModal" class="modal fade">
         <div class="modal-dialog modal-login">
           <div class="modal-content">

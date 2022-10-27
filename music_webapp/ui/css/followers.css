@@ -1,0 +1,23 @@
+body {
+    background-color: #242526
+  }
+
+  .followers {
+    font-size: 12px;
+    color:white;
+  }
+
+  .font-weight-bold{
+      color:white;
+  }
+
+  p{
+      color:white;
+      font-size: 30px;
+  }
+
+  .flex-row:hover{
+    background-color: gray;
+    padding:3px;
+    border-radius: 3px;
+}
