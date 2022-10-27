@@ -36,188 +36,236 @@
 
   </head>
     <body>
-        <div class="padding">
-            <div class="col-md-8">
-                <!-- Column -->
-                <div class="card"> <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Black_from_a_camera.jpg/1200px-Black_from_a_camera.jpg" alt="Card image cap">
-                    <div class="card-body little-profile text-center">
-                        <div class="pro-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT42STwjfKg1x3AmsXTwpXHV6DmN-ZfGoJp1A&usqp=CAU" alt="user"></div>
-                        <h3 class="m-b-0">USERNAME</h3>
-                        <div class="row text-center m-t-20">
-                            <div class="col-lg-4 col-md-4 m-t-20">
-                                <h3 class="m-b-0 font-light">7</h3><a href="#">Followers</a>
+
+        <nav>
+            <div id="nav-contianer-top" class="flex-nav-container">
+                <div class="logo flex-nav-item-logo">
+                    <img  class="logo-image" src="../img/logo.png" alt="logo"> </div>
+                <div class="logo flex-nav-item-logo-title">
+                    <h1 class="logo-title">Media Player</h1>
+                </div>
+    
+                <div class="wrapper">
+                    <input class = "toggler" id="toggler" type="checkbox">
+                    <label for="toggler">
+                      <img class="flex-nav-item-profile" src="https://cdn.icon-icons.com/icons2/1378/PNG/512/avatardefault_92824.png" alt="">
+                    </label>
+                    <div class="dropdown">
+                      <a href="account.html">Account</a>
+                      <a href="profile.html">Profile</a>
+                      <a href="#">Log Out</a>
+                    </div>
+                  </div>
+                
+            </div>
+        </nav>  
+        
+        
+    
+        <div class=" grid-container">
+                    <div class="left-panel">
+                        <div class="left-panel-interior">
+                            <div class="vertical-menu" id="vertical-menu" >
+                                <div class="space"></div>
+                                <a href="home-page.html" class="active"><i class="fa fa-home"></i>Home</a>
+                                <a href="your-playlists.html"><i class="fa fa-folder"></i>Your Playlists</a>
+                                <a href="#newplaylist"><i class="fa fa-list"></i>Create Playlist</a>
+                                <a href=#>Privacy Policy</a>
+                                <a href=#>Cookie Policy</a>
                             </div>
-                            <div class="col-lg-4 col-md-4 m-t-20">
-                                <h3 class="m-b-0 font-light">4</h3><a href="followers.html">Followers</a>
-                            </div>
+                            
                         </div>
-                        <br><br>
-                        <div>
-                            <h1>Your Top Artists</h1><br>
-                            <div class="section inner-grid scrollx">
-                                <div class="img-box">
-                                    <div>
-                                        <img class = "rounded-circle" src="https://render.fineartamerica.com/images/rendered/default/poster/8/8/break/images/artworkimages/medium/3/black-logo-of-the-strokes-band-ryan-emmanuelle.jpg" alt="">
-                                    </div>
-                                    <div class="label">
-                                        <h3 class = "name">The Strokes</h3>
+                        <!-- <div class ="helpful-links">
+                            <a class="appbar-button centered-bottom" href=#>Privacy Policy</a>
+                            <a class="appbar-button centered-bottom" href=#>Cookie Policy</a>
+                        </div> -->
+                    </div>
+                    <div class="right-panel">
+                        <div class="outer-grid scrolly">
+                            <div class="col-md-8">
+                                <!-- Column -->
+                                <div class="card"> <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Black_from_a_camera.jpg/1200px-Black_from_a_camera.jpg" alt="Card image cap">
+                                    <div class="card-body little-profile text-center">
+                                        <div class="pro-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT42STwjfKg1x3AmsXTwpXHV6DmN-ZfGoJp1A&usqp=CAU" alt="user"></div>
+                                        <h3 class="m-b-0">USERNAME</h3>
+                                        <div class="row text-center m-t-20">
+                                            <div class="col-lg-4 col-md-4 m-t-20">
+                                                <h3 class="m-b-0 font-light">7</h3><a href="#">Followers</a>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 m-t-20">
+                                                <h3 class="m-b-0 font-light">4</h3><a href="followers.html">Followers</a>
+                                            </div>
+                                        </div>
+                                        <br><br>
+                                        <div>
+                                            <h1>Your Top Artists</h1><br>
+                                            <div class="section inner-grid scrollx">
+                                                <div class="img-box">
+                                                    <div>
+                                                        <img class = "rounded-circle" src="https://render.fineartamerica.com/images/rendered/default/poster/8/8/break/images/artworkimages/medium/3/black-logo-of-the-strokes-band-ryan-emmanuelle.jpg" alt="">
+                                                    </div>
+                                                    <div class="label">
+                                                        <h3 class = "name">The Strokes</h3>
+                                                    </div>
+                                                </div>
+                
+                                                <div class="img-box">
+                                                    <div>
+                                                        <img class = "rounded-circle" src="https://render.fineartamerica.com/images/rendered/default/poster/8/8/break/images/artworkimages/medium/3/black-logo-of-the-strokes-band-ryan-emmanuelle.jpg" alt="">
+                                                    </div>
+                                                    <div class="label">
+                                                        <h3 class = "name">The Strokes</h3>
+                                                    </div>
+                                                </div>
+                
+                                                <div class="img-box">
+                                                    <div>
+                                                        <img class = "rounded-circle" src="https://render.fineartamerica.com/images/rendered/default/poster/8/8/break/images/artworkimages/medium/3/black-logo-of-the-strokes-band-ryan-emmanuelle.jpg" alt="">
+                                                    </div>
+                                                    <div class="label">
+                                                        <h3 class = "name">The Strokes</h3>
+                                                    </div>
+                                                </div>
+                
+                                                <div class="img-box">
+                                                    <div>
+                                                        <img class = "rounded-circle" src="https://render.fineartamerica.com/images/rendered/default/poster/8/8/break/images/artworkimages/medium/3/black-logo-of-the-strokes-band-ryan-emmanuelle.jpg" alt="">
+                                                    </div>
+                                                    <div class="label">
+                                                        <h3 class = "name">The Strokes</h3>
+                                                    </div>
+                                                </div>
+                
+                                                <div class="img-box">
+                                                    <div>
+                                                        <img class = "rounded-circle" src="https://render.fineartamerica.com/images/rendered/default/poster/8/8/break/images/artworkimages/medium/3/black-logo-of-the-strokes-band-ryan-emmanuelle.jpg" alt="">
+                                                    </div>
+                                                    <div class="label">
+                                                        <h3 class = "name">The Strokes</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                
+                                            <br><br>
+                    
+                                                
+                                                
+                                        </div>
+                                            <h1>Your Top Songs</h1><br>
+                                            <div class="p-3 card">
+                                                <div class="d-flex justify-content-between align-items-center p-3 music">
+                                                    <div class="d-flex flex-row align-items-center">
+                                                        <i class="fa fa-music color"></i>
+                                                        <small class="ml-2">The Adults Are Talking</small>
+                                                    </div>
+                                                    <i class="fa fa-heart color"></i>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center p-3 music">
+                                                    <div class="d-flex flex-row align-items-center">
+                                                        <i class="fa fa-music color"></i>
+                                                        <small class="ml-2">Reptilia</small>
+                                                    </div>
+                                                    <i class="fa fa-heart color"></i>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center p-3 music">
+                                                    <div class="d-flex flex-row align-items-center">
+                                                        <i class="fa fa-music color"></i>
+                                                        <small class="ml-2">Last Night</small>
+                                                    </div>
+                                                    <i class="fa fa-heart color"></i>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center p-3 music">
+                                                    <div class="d-flex flex-row align-items-center">
+                            
+                                                        <i class="fa fa-music color"></i>
+                                                        <small class="ml-2">You Only Live Once]</small>
+                                                    </div>
+                                                    <i class="fa fa-heart color"></i>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center p-3 music">
+                                                    <div class="d-flex flex-row align-items-center">
+                                                        <i class="fa fa-music color"></i>
+                                                        <small class="ml-2">Call it Fate, Call it Karma</small>      
+                                                    </div>
+                                                    <i class="fa fa-heart color"></i>
+                                                </div>
+                                            </div>
+                                            <br><br>
+                                            <h1>Your Playlists</h1><br>
+                                            <div class="section inner-grid scrollx">
+                                                <div class="img-box">
+                                                    <div>
+                                                        <img src="https://images.squarespace-cdn.com/content/v1/5eb1ea3236657c794f643121/1590182388401-9CQ3U3GCM8VMNCPZ7CLC/Nyckole-Lopez-ram-jams.jpeg" alt="">
+                                                    </div>
+                                                    <div class="label">
+                                                        <h3 class = "name">The New Abnormal</h3>
+                                                    </div>
+                                                </div>
+                    
+                                                <div class="img-box">
+                                                  <div>
+                                                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Future_Present_Past_EP.jpg/1200px-Future_Present_Past_EP.jpg" alt="">
+                                                  </div>
+                                                  <div class="label">
+                                                      <h3 class = "name">Future Present Past</h3>
+                                                  </div>
+                                                </div>
+                    
+                                                <div class="img-box">
+                                                    <div>
+                                                        <img src="https://m.media-amazon.com/images/I/61JWlz3hnRL._SL1500_.jpg" alt="">
+                                                    </div>
+                                                    <div class="label">
+                                                        <h3 class = "name">Comedown Machine</h3>
+                                                    </div>
+                                                  </div>
+                
+                                                <div class="img-box">
+                                                    <div>
+                                                        <img src="https://m.media-amazon.com/images/I/81-wt1kTStL._SL1500_.jpg" alt="">
+                                                    </div>
+                                                    <div class="label">
+                                                        <h3 class = "name">Angles</h3>
+                                                    </div>
+                                                </div>
+                
+                                                <div class="img-box">
+                                                    <div>
+                                                        <img src="https://static.stereogum.com/uploads/2015/12/The-Strokes-First-Impressions-of-Earth.jpg" alt="">
+                                                    </div>
+                                                    <div class="label">
+                                                        <h3 class = "name">First Impressions of Earth</h3>
+                                                    </div>
+                                                </div>
+                
+                                                <div class="img-box">
+                                                    <div>
+                                                        <img src="https://m.media-amazon.com/images/I/71ZcjUILvdL._SX425_.jpg" alt="">
+                                                    </div>
+                                                    <div class="label">
+                                                        <h3 class = "name">Room on Fire</h3>
+                                                    </div>
+                                                </div>
+                
+                                                <div class="img-box">
+                                                    <div>
+                                                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e7/The_Strokes_-_Ist_Tis_It_US_cover.png/220px-The_Strokes_-_Ist_Tis_It_US_cover.png" alt="">
+                                                    </div>
+                                                    <div class="label">
+                                                        <h3 class = "name">Is This It</h3>
+                                                    </div>
+                                                </div>
+                    
+                                                
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-
-                                <div class="img-box">
-                                    <div>
-                                        <img class = "rounded-circle" src="https://render.fineartamerica.com/images/rendered/default/poster/8/8/break/images/artworkimages/medium/3/black-logo-of-the-strokes-band-ryan-emmanuelle.jpg" alt="">
-                                    </div>
-                                    <div class="label">
-                                        <h3 class = "name">The Strokes</h3>
-                                    </div>
-                                </div>
-
-                                <div class="img-box">
-                                    <div>
-                                        <img class = "rounded-circle" src="https://render.fineartamerica.com/images/rendered/default/poster/8/8/break/images/artworkimages/medium/3/black-logo-of-the-strokes-band-ryan-emmanuelle.jpg" alt="">
-                                    </div>
-                                    <div class="label">
-                                        <h3 class = "name">The Strokes</h3>
-                                    </div>
-                                </div>
-
-                                <div class="img-box">
-                                    <div>
-                                        <img class = "rounded-circle" src="https://render.fineartamerica.com/images/rendered/default/poster/8/8/break/images/artworkimages/medium/3/black-logo-of-the-strokes-band-ryan-emmanuelle.jpg" alt="">
-                                    </div>
-                                    <div class="label">
-                                        <h3 class = "name">The Strokes</h3>
-                                    </div>
-                                </div>
-
-                                <div class="img-box">
-                                    <div>
-                                        <img class = "rounded-circle" src="https://render.fineartamerica.com/images/rendered/default/poster/8/8/break/images/artworkimages/medium/3/black-logo-of-the-strokes-band-ryan-emmanuelle.jpg" alt="">
-                                    </div>
-                                    <div class="label">
-                                        <h3 class = "name">The Strokes</h3>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <br><br>
-    
-                                
-                                
-                        </div>
-                            <h1>Your Top Songs</h1><br>
-                            <div class="p-3 card">
-                                <div class="d-flex justify-content-between align-items-center p-3 music">
-                                    <div class="d-flex flex-row align-items-center">
-                                        <i class="fa fa-music color"></i>
-                                        <small class="ml-2">The Adults Are Talking</small>
-                                    </div>
-                                    <i class="fa fa-heart color"></i>
-                                </div>
-                                <div class="d-flex justify-content-between align-items-center p-3 music">
-                                    <div class="d-flex flex-row align-items-center">
-                                        <i class="fa fa-music color"></i>
-                                        <small class="ml-2">Reptilia</small>
-                                    </div>
-                                    <i class="fa fa-heart color"></i>
-                                </div>
-                                <div class="d-flex justify-content-between align-items-center p-3 music">
-                                    <div class="d-flex flex-row align-items-center">
-                                        <i class="fa fa-music color"></i>
-                                        <small class="ml-2">Last Night</small>
-                                    </div>
-                                    <i class="fa fa-heart color"></i>
-                                </div>
-                                <div class="d-flex justify-content-between align-items-center p-3 music">
-                                    <div class="d-flex flex-row align-items-center">
-            
-                                        <i class="fa fa-music color"></i>
-                                        <small class="ml-2">You Only Live Once]</small>
-                                    </div>
-                                    <i class="fa fa-heart color"></i>
-                                </div>
-                                <div class="d-flex justify-content-between align-items-center p-3 music">
-                                    <div class="d-flex flex-row align-items-center">
-                                        <i class="fa fa-music color"></i>
-                                        <small class="ml-2">Call it Fate, Call it Karma</small>      
-                                    </div>
-                                    <i class="fa fa-heart color"></i>
-                                </div>
-                            </div>
-                            <br><br>
-                            <h1>Your Playlists</h1><br>
-                            <div class="section inner-grid scrollx">
-                                <div class="img-box">
-                                    <div>
-                                        <img src="https://images.squarespace-cdn.com/content/v1/5eb1ea3236657c794f643121/1590182388401-9CQ3U3GCM8VMNCPZ7CLC/Nyckole-Lopez-ram-jams.jpeg" alt="">
-                                    </div>
-                                    <div class="label">
-                                        <h3 class = "name">The New Abnormal</h3>
-                                    </div>
-                                </div>
-    
-                                <div class="img-box">
-                                  <div>
-                                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Future_Present_Past_EP.jpg/1200px-Future_Present_Past_EP.jpg" alt="">
-                                  </div>
-                                  <div class="label">
-                                      <h3 class = "name">Future Present Past</h3>
-                                  </div>
-                                </div>
-    
-                                <div class="img-box">
-                                    <div>
-                                        <img src="https://m.media-amazon.com/images/I/61JWlz3hnRL._SL1500_.jpg" alt="">
-                                    </div>
-                                    <div class="label">
-                                        <h3 class = "name">Comedown Machine</h3>
-                                    </div>
-                                  </div>
-
-                                <div class="img-box">
-                                    <div>
-                                        <img src="https://m.media-amazon.com/images/I/81-wt1kTStL._SL1500_.jpg" alt="">
-                                    </div>
-                                    <div class="label">
-                                        <h3 class = "name">Angles</h3>
-                                    </div>
-                                </div>
-
-                                <div class="img-box">
-                                    <div>
-                                        <img src="https://static.stereogum.com/uploads/2015/12/The-Strokes-First-Impressions-of-Earth.jpg" alt="">
-                                    </div>
-                                    <div class="label">
-                                        <h3 class = "name">First Impressions of Earth</h3>
-                                    </div>
-                                </div>
-
-                                <div class="img-box">
-                                    <div>
-                                        <img src="https://m.media-amazon.com/images/I/71ZcjUILvdL._SX425_.jpg" alt="">
-                                    </div>
-                                    <div class="label">
-                                        <h3 class = "name">Room on Fire</h3>
-                                    </div>
-                                </div>
-
-                                <div class="img-box">
-                                    <div>
-                                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e7/The_Strokes_-_Ist_Tis_It_US_cover.png/220px-The_Strokes_-_Ist_Tis_It_US_cover.png" alt="">
-                                    </div>
-                                    <div class="label">
-                                        <h3 class = "name">Is This It</h3>
-                                    </div>
-                                </div>
-    
-                                
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
         </div>
+            
     </body>
     <footer>
     </footer>

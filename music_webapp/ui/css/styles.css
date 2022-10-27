@@ -1,97 +1,97 @@
 
 
 .body {
-    font-family:  'Trebuchet MS', sans-serif;
-    width: 100%;
-    
+  font-family:  'Trebuchet MS', sans-serif;
+  width: 100%;
+  
 }
 
 * {
-    box-sizing: border-box;
-  }
- 
+  box-sizing: border-box;
+}
+
 i {
-    margin-right: 10px;
+  margin-right: 10px;
 } 
 
 /* Grid layout two columns for sidebar vertical menu and main content, 
 one fixed footer */
 .grid-container {
-    display: grid;
-    grid-template: auto auto / 25% auto;
-    grid-template-areas: 
-        /* 'logo header'  putting nav bar outside of grid to implement sticky navbar*/
-        'left main '
-        'footer footer';
-    grid-gap: 0px;
-    padding: 0px;
-  }
-  
+  display: grid;
+  grid-template: auto auto / 25% auto;
+  grid-template-areas: 
+      /* 'logo header'  putting nav bar outside of grid to implement sticky navbar*/
+      'left main '
+      'footer footer';
+  grid-gap: 0px;
+  padding: 0px;
+}
+
 /* Sticky navigation bar with logo, title and nav menu */
 nav { 
-  background-color: black;
-  position:sticky;
-  top: 0px;
-  display:table;
-  z-index: 1000;  /* make sure navbar is top layer */
-  max-height:50px;
-  padding-top:5px;
-  width:100%;  /* this is needed to make sure navbar goes across screen */
+background-color: black;
+position:sticky;
+top: 0px;
+display:table;
+z-index: 1000;  /* make sure navbar is top layer */
+max-height:5%;
+padding-top:5px;
+width:100%;  /* this is needed to make sure navbar goes across screen */
 }
- 
+
 .flex-nav-container {
-  display:flex;
-  width:100%;
+display:flex;
+width:100%;
 }
 
 .flex-nav-item-logo {
-     flex: 0;
+   flex: 0;
 }
-  
+
 .flex-nav-item-logo-title {
-    flex: 0;
+  flex: 0;
 }
-  
+
 .flex-nav-item-menu {
-    flex: 1;
-    float:right;
+  flex: 1;
+  float:right;
 }
 
 .flex-nav-item-profile {
-  flex: 1;
-  float:right;
-  width:50px;
-  height:50px;
-  margin-top: 5px;
-  margin-right: 5px;
+flex: 1;
+float:right;
+width:50px;
+height:50px;
+margin-top: 5px;
+margin-right: 5px;
 }
 
 .wrapper {
-  position:relative;
-  text-align: right;
+position:relative;
+text-align: right;
 }
 
 .toggler{
-  display: none;
+display: none;
 }
 input {
-  opacity: 0;
-  pointer-events: none;
-  touch-action: none;
+opacity: 0;
+pointer-events: none;
+touch-action: none;
 }
 .dropdown {
-  background-color: black;
-  display: none;
-  position: absolute;
-  top: calc(100% + 10px);
-  flex-direction: column;
-  border: 1px solid black;
-  padding: 5px;
-  gap: 5px;
-  right: 0;
+background-color: black;
+display: none;
+position: absolute;
+top: calc(100% + 10px);
+flex-direction: column;
+border: 1px solid black;
+padding: 5px;
+gap: 5px;
+right: 0;
 }
 input:checked ~ .dropdown {
-  display: flex;
+display: flex;
 }
 
 
@@ -101,598 +101,641 @@ input:checked ~ .dropdown {
 #nav-contianer-top div:nth-of-type(3) {flex-grow: 3;} /*navbar menu*/
 
 .navbar {
-    overflow: hidden;
-  }
-  
-  /* Navigation links */
-  .navbar a {
-    float: right;
-    padding: 5px;
-    color: white;
-    text-decoration: none;
-    font-size: 15px;
-    width: 20%;
-    text-align: center;
-  }
+  overflow: hidden;
+}
+
+/* Navigation links */
+.navbar a {
+  float: right;
+  padding: 5px;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  width: 20%;
+  text-align: center;
+}
 
 /* .navbar a.hamburger-menu { 
-    width:30px;
-  } */
+  width:30px;
+} */
 
-  #align-bottom {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
+#align-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
 
 /* Add a background color on mouse-over */
 .navbar a:hover {color: red;}
 .navbar a:active {color:red;}
 .navbar a:focus{color:red;}
 
-  .logo {
-    padding-left: 5px;
-  }
-  
-  .logo > .logo-image{
-  width:50px;
-  height:50px;
+.logo {
+  padding-left: 5px;
+}
+
+.logo > .logo-image{
+width:50px;
+height:50px;
+margin-top: 5px;
+
+}
+
+.logo > .logo-title {
   margin-top: 5px;
+  font-size: 40px; 
+  padding-left: 5px;
+  display:inline-block;
+  text-align:left;
+  color:white;
+  white-space: nowrap;
+}
 
-  }
-  
-  .logo > .logo-title {
-    margin-top: 5px;
-    font-size: 40px; 
-    padding-left: 5px;
-    display:inline-block;
-    text-align:left;
-    color:white;
-    white-space: nowrap;
-  }
+/*  fixed footer */
+.footer {
+  /* grid-area: footer;
+  height: 10%;
+  overflow: hidden; */
 
-  /*  fixed footer */
- .footer {
-    grid-area: footer;
-    height: 10%;
-    overflow: hidden;
-  }
-  
-  .footer > div {
-    background-color: darkred;
-    text-align: center;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    font-size: 25px;
-  }
+  width:100%;
+  height:5%;
+  background-color: darkred;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  font-size: 25px;
+  padding-top: 10px;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+}
 
+.footer > div {
+  background-color: darkred;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-size: 25px;
+}
+
+ /*  fixed footer */
+.footer {
+  /* grid-area: footer;
+  height: 10%;
+  overflow: hidden; */
+  width:100%;
+  height:5%;
+  background-color: darkred;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  font-size: 25px;
+  padding-top: 10px;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.footer > div {
+  background-color: darkred;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-size: 25px;
+}
 .footer a {
-    color:white;
-}
-
-.footer .row {
-  margin-left: 0;
-}
-
-.footer h3{
   color:white;
 }
 
+.footer .row {
+margin-left: 0;
+}
+
+.footer h3{
+color:white;
+}
+
 .row {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .column {
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center;
-    align-items: center;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
 }
 
 .left-panel {
-    grid-area: left;
-    top: 7%; 
-    left: 0;
-    width: 25%;
-    position: fixed;
-    height: 100%; 
-    background-color: #FF4301;
-    padding-bottom:10%;
-    float:left;
-    flex-flow: row nowrap; 
-    justify-content: space-between;
+  grid-area: left;
+  /* top: 7%;  */
+  left: 0;
+  width: 25%;
+  position: fixed;
+  height: 90%; 
+  background-color: #FF4301;
+  padding-bottom:10%;
+  float:left;
+  flex-flow: row nowrap; 
+  justify-content: space-between;
 }
 
 .left-panel-interior {
-    /* display:block; */
-    padding-top: 1%; 
-    color: white;
-    background-color: #FF4301;
-    /* flex-flow: column nowrap;  */
-    /* align-items: center; */
-    justify-content: space-between;
-    height: 100%; 
-    
+  /* display:block; */
+  padding-top: 1%; 
+  color: white;
+  background-color: #FF4301;
+  /* flex-flow: column nowrap;  */
+  /* align-items: center; */
+  justify-content: space-between;
+  height: 100%; 
+  
 }
 
 .centered-bottom {
-    /* display: flex; */
-    justify-content: center;
-    align-items: center;
-    /* position: fixed;*/
-    bottom: 10%;
-    padding: 10px;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  /* position: fixed;*/
+  bottom: 10%;
+  padding: 10px;
 }
 
 .right-panel {
-    grid-area: main;
-    width: 100%; 
-    height: 100%;
-    /* position: absolute; 
-    left: 25%;
-    top: 10%; 
-    bottom: 5%;  */
-    background-color: #242526;
-    /* display: flex;
-    flex-flow: column nowrap;  */
-    /* align-items: center;
-    justify-content: space-between; */
-    padding: 0px;
-    overflow:hidden;  /* need these two lines to make allow horizontal scrolling to bottom of content...otherwise fixed footer covers it. */
-    margin: 0 auto 100px auto;  /* top/right/bottom/left this adds extra space to accommodate fixed footer */
+  grid-area: main;
+  width: 100%; 
+  height: 100%;
+  /* position: absolute; 
+  left: 25%;
+  top: 10%; 
+  bottom: 5%;  */
+  background-color: #242526;
+  /* display: flex;
+  flex-flow: column nowrap;  */
+  /* align-items: center;
+  justify-content: space-between; */
+  padding: 0px;
+  overflow:hidden;  /* need these two lines to make allow horizontal scrolling to bottom of content...otherwise fixed footer covers it. */
+  margin: 0 auto 100px auto;  /* top/right/bottom/left this adds extra space to accommodate fixed footer */
 }
 
 .appbar {
-    color: white;
-    top: 0; 
-    right: 0; 
-    position: fixed;
-    width: 75%;
-    height: 10%;
-    display: flex;
-    background-color: #FF4301; 
-    flex-flow: row nowrap; 
-    justify-content: center;
-    align-items: center;
+  color: white;
+  top: 0; 
+  right: 0; 
+  position: fixed;
+  width: 75%;
+  height: 10%;
+  display: flex;
+  background-color: #FF4301; 
+  flex-flow: row nowrap; 
+  justify-content: center;
+  align-items: center;
 }
 
 .appbar-button {
-    text-decoration: none;
+  text-decoration: none;
 
 }
 
 .left-panel-button {
-    text-decoration: none;
-    margin-bottom: 1000px; 
+  text-decoration: none;
+  margin-bottom: 1000px; 
 }
 
 .body-button {
-    text-decoration: none;
-    color:orange;
+  text-decoration: none;
+  color:orange;
 }
 
 .appbar-button:visited, .appbar-button:link, .appbar-button:hover, .appbar-button:focus, .appbar-button:active{
-    color: white;
+  color: white;
 }
 
 .left-panel-button:visited, .left-panel-button:link, .left-panel-button:hover, .left-panel-button:focus, .left-panel-button:active{
-    color: white;
+  color: white;
 }
 
 .body-button:visited, .body-button:link, .body-button:hover, .body-button:focus, .body-button:active{
-    color: orange;
+  color: orange;
 }
 
 .helpful-links{
-  bottom: 10%;
+bottom: 10%;
+}
+
+#align-bottom {
+position: absolute;
+bottom: 20px;
+left: 0;
 }
 
 /* TODO: switch to nav  make responsive by sliding in and out of view when hamburger  menu is clicked */
 .vertical-menu{ 
-    height: 100%;
-    /* visibility: hidden; */
+  height: 100%;
+  /* visibility: hidden; */
 }
-  
+
 .vertical-menu a {
-      /* background-color: #000000; */
-      color: white; 
-      font-size: 20px;
-      display: block; /* Make the links appear below each other */
-      padding: 12px; /* Add some padding */
-      text-decoration: none; /* Remove underline from links */
+    /* background-color: #000000; */
+    color: white; 
+    font-size: 20px;
+    display: block; /* Make the links appear below each other */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
 }
-  
+
 .vertical-menu a:hover {
-      background-color: lightgray; /* Dark grey background on mouse-over */
-      text-decoration: none; /* Remove underline from links */
+    background-color: lightgray; /* Dark grey background on mouse-over */
+    text-decoration: none; /* Remove underline from links */
 }
-  
+
 .vertical-menu a:active{
-      background-color: red; 
-      text-decoration: none; /* Remove underline from links */
+    background-color: red; 
+    text-decoration: none; /* Remove underline from links */
 }
-  
+
 .vertical-menu a:focus{
-      background-color: red; 
-      text-decoration: none; /* Remove underline from links */
+    background-color: red; 
+    text-decoration: none; /* Remove underline from links */
 }
 
 
 /* music grid */
 
 .section {
-    padding-left: 2%;
-    background-color: #242526;
- }
-
-
- .outer-grid {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-gap: 0px;
-    position: relative;
-    padding: 10px;
- }
- 
- .outer-grid.scrolly {
-      overflow-x: hidden;
-      overflow-y: auto;
-      white-space: nowrap;
-      height: auto; 
- }
-
- .outer-grid > h1 {
-   width: 100%;
-   text-align: left;
-   margin:0px;
-   padding-top:10px;
-   color: white;
-}
- .inner-grid {
-    display:flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    /* padding: 0 0 10px 0; */
-    margin: 0;
-    padding-bottom: 5%;
-    position: relative;
-    height: 100%;
- }
- 
- .inner-grid > div {
-    padding-left:2%;
- }
-
- .inner-grid.scrollx {
-   overflow-x: auto;
-   overflow-y: hidden;
-   white-space: nowrap;
+  padding-left: 2%;
+  background-color: #242526;
 }
 
+.outer-grid {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-gap: 0px;
+  position: relative;
+  padding: 10px;
+}
 
- /* audio control */
- .inner-grid img {
-     margin-top: 5%;
-     margin-bottom: 1%;
-     height: 200px;
-     width: 200px; 
-     padding: 2%;
-     border-radius: 15px;
-     box-shadow: 8px 8px 4px black;
-  }
+.outer-grid.scrolly {
+    overflow-x: hidden;
+    overflow-y: auto;
+    white-space: nowrap;
+    height: auto; 
+}
+
+.outer-grid > h1 {
+ width: 100%;
+ text-align: left;
+ margin:0px;
+ padding-top:10px;
+ color: white;
+}
+.inner-grid {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  /* padding: 0 0 10px 0; */
+  margin: 0;
+  padding-bottom: 5%;
+  position: relative;
+  height: 100%;
+}
+
+.inner-grid > div {
+  padding-left:2%;
+}
+
+.inner-grid.scrollx {
+ overflow-x: auto;
+ overflow-y: hidden;
+ white-space: nowrap;
+}
+
+
+/* audio control */
+.inner-grid img {
+   margin-top: 5%;
+   margin-bottom: 1%;
+   height: 200px;
+   width: 200px; 
+   padding: 2%;
+   border-radius: 15px;
+   box-shadow: 8px 8px 4px black;
+}
+
+.inner-grid img:hover {
+   opacity:0.5;
+}
+
+.inner-grid img:focus {
+   opacity:0.5;
+}
+
+.inner-grid:hover:after + .play-control-overlay {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 20px;
+  height: 200%;
+}
+
+.inner-grid img:hover + .play-control-overlay {
+  display: block;
+} 
+
+.inner-grid img:focus + .play-control-overlay {
+     display: block;
+}
+
+.inner-grid .img-box {
+  position: relative;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.inner-grid .img-box i {
+  position:absolute;
+  top: 12%;
+  left:80%; 
+  color: red;   
+}
   
-  .inner-grid img:hover {
-     opacity:0.5;
-  }
-  
-  .inner-grid img:focus {
-     opacity:0.5;
-  }
-  
-  .inner-grid:hover:after + .play-control-overlay {
-    content: '';
+.play-control-overlay {
+    display:none;
+    /* visibility:hidden; */
+    background-color:darkred;
+    padding: 5px;
+    border-radius: 25px;
     position: absolute;
-    top: 0;
-    left: 50%;
-    width: 20px;
-    height: 200%;
-  }
+    top:55%;
+    zoom: 65%; 
+}
+      
+.play-control-overlay:active {
+    background-color: darkred; 
+}
 
-  .inner-grid img:hover + .play-control-overlay {
-    display: block;
-  } 
-  
-  .inner-grid img:focus + .play-control-overlay {
-       display: block;
-  }
-
-  .inner-grid .img-box {
-    position: relative;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
- }
-  .inner-grid .img-box i {
-    position:absolute;
-    top: 12%;
-    left:80%; 
-    color: red;   
-  }
-    
-  .play-control-overlay {
-      display:none;
-      /* visibility:hidden; */
-      background-color:darkred;
-      padding: 5px;
-      border-radius: 25px;
-      position: absolute;
-      top:55%;
-      zoom: 65%; 
-  }
-        
-  .play-control-overlay:active {
-      background-color: darkred; 
-  }
-  
-  audio{
-      display: none;
-  }
-  
-  audio:hover {
-      display:block;
-      transform: scale(1.1);
-      filter: drop-shadow(2px 3px 3px #333);
-  }
-
-  .label {
-    margin-top: 10px;
-    text-align: center;
-  }
-  
-  .label h3 {
-    margin-top: 0px;
-    padding: 1px;
-  }
- 
-  .label .name {
-      text-align: center;
-      display: block;
-      font-size: 14px;
-      color:white;
-      margin: 0 0 3px 0;
-      white-space: wrap;
-      word-wrap: break-word;
-      text-overflow: ellipsis;
-    }
- 
- 
- .label .artist {
-      text-align: center;
-      color: lightgrey;
-      font-size: 12px;
-      font-weight: normal;
-      margin: 0;
-  }
-
-  .label .countdown {
-    color:white;
-  }
-
-  .modal-login {
-    color: #242526;
-    width: 50%;
-  }
-  .modal-login .modal-content {
-    color: #242526;
-    padding: 20px;
-    border-radius: 5px;
-    border: none;
-  }
-  .modal-login .modal-header {
-    border-bottom: none;
-    position: relative;
-    justify-content: center;
-  }
-  .modal-login h4 {
-    text-align: center;
-    font-size: 26px;
-    margin: 30px 0 -15px;
-  }
-  .modal-login .form-control:focus {
-    border-color: #70c5c0;
-  }
-  .modal-login .form-control,
-  .modal-login .btn {
-    min-height: 40px;
-    border-radius: 3px;
-  }
-  .modal-login .close {
-    position: absolute;
-    top: -5px;
-    right: -5px;
-  }
-  .modal-login .modal-body {
-    color: #242526
-  }
-  .modal-login .modal-footer {
-    background: #242526;
-    border-color:#242526;
-    text-align: center;
-    justify-content: center;
-    margin: 0 -20px -20px;
-    border-radius: 5px;
-    font-size: 13px;
-  }
-  .modal-login .modal-footer a {
-    color: #242526;
-  }
-  .modal-login .avatar {
-    position: absolute;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    top: -70px;
-    width: 95px;
-    height: 95px;
-    border-radius: 50%;
-    z-index: 9;
-    background: orange;
-    padding: 15px;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
-  }
-  .modal-login .avatar img {
-    width: 100%;
-  }
-  .modal-login.modal-dialog {
-    margin-top: 80px;
-  }
-  .modal-login .btn {
-    color: #fff;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: all 0.4s;
-    line-height: normal;
-    border: none;
-  }
-  .modal-login .btn:hover,
-  .modal-login .btn:focus {
-    background: #45aba6;
-    outline: none;
-  }
-  .trigger-btn {
-    display: inline-block;
-    margin: 100px auto;
-  }
-  
-  /* Style all input fields */
-  input {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-  }
-  
-  /* Style the submit button */
-  input[type="submit"] {
-    background-color: #4caf50;
-    color: white;
-  }
-  
-  /* The message box is shown when the user clicks on the password field */
-  #message {
+audio{
     display: none;
-    background: #f1f1f1;
-    color: #000;
-    position: relative;
-    padding: 20px;
-    margin-top: 10px;
-  }
-  
-  #message p {
-    padding: 10px 35px;
-    font-size: 18px;
-  }
-  
-  /* Add a green text color and a checkmark when the requirements are right */
-  .valid {
-    color: green;
-  }
-  
-  .valid:before {
-    position: relative;
-    left: -35px;
-    content: "\2713";
-  }
-  
-  /* Add a red text color and an "x" when the requirements are wrong */
-  .invalid {
-    color: red;
-  }
-  
-  .invalid:before {
-    position: relative;
-    left: -35px;
-    content: "\00D7";
-  }
-  
-  
-   /* tablet view */
-   @media screen and (max-width: 768px) {
-    .outer-grid h1 {
-        font-size: 24px;
-        padding: 1%;
-    }
-    
-    .inner-grid .img-box {
-        transform: scale(0.8); 
-     }
+}
 
-    .inner-grid img {
-      margin-top: 1%;
-      margin-bottom: 1%;
+audio:hover {
+    display:block;
+    transform: scale(1.1);
+    filter: drop-shadow(2px 3px 3px #333);
+}
+
+.label {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.label h3 {
+  margin-top: 0px;
+  padding: 1px;
+}
+
+.label .name {
+    text-align: center;
+    display: block;
+    font-size: 14px;
+    color:white;
+    margin: 0 0 3px 0;
+    white-space: wrap;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+  }
+
+
+.label .artist {
+    text-align: center;
+    color: lightgrey;
+    font-size: 12px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.label .countdown {
+  color:white;
+}
+
+.modal-login {
+  color: #242526;
+  width: 50%;
+}
+.modal-login .modal-content {
+  color: #242526;
+  padding: 20px;
+  border-radius: 5px;
+  border: none;
+}
+.modal-login .modal-header {
+  border-bottom: none;
+  position: relative;
+  justify-content: center;
+}
+.modal-login h4 {
+  text-align: center;
+  font-size: 26px;
+  margin: 30px 0 -15px;
+}
+.modal-login .form-control:focus {
+  border-color: #70c5c0;
+}
+.modal-login .form-control,
+.modal-login .btn {
+  min-height: 40px;
+  border-radius: 3px;
+}
+.modal-login .close {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}
+.modal-login .modal-body {
+  color: #242526
+}
+.modal-login .modal-footer {
+  background: #242526;
+  border-color:#242526;
+  text-align: center;
+  justify-content: center;
+  margin: 0 -20px -20px;
+  border-radius: 5px;
+  font-size: 13px;
+}
+.modal-login .modal-footer a {
+  color: #242526;
+}
+.modal-login .avatar {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: -70px;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  z-index: 9;
+  background: orange;
+  padding: 15px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+.modal-login .avatar img {
+  width: 100%;
+}
+.modal-login.modal-dialog {
+  margin-top: 80px;
+}
+.modal-login .btn {
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.4s;
+  line-height: normal;
+  border: none;
+}
+.modal-login .btn:hover,
+.modal-login .btn:focus {
+  background: #45aba6;
+  outline: none;
+}
+.trigger-btn {
+  display: inline-block;
+  margin: 100px auto;
+}
+
+/* Style all input fields */
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+}
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+  display: none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#message p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "\2713";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "\00D7";
+}
+
+
+ /* tablet view */
+ @media screen and (max-width: 768px) {
+  .outer-grid h1 {
+      font-size: 24px;
       padding: 1%;
+  }
+  
+  .inner-grid .img-box {
+      transform: scale(0.8); 
    }
 
-    .navbar a {
-        font-size: 12px;
-    }
+  .inner-grid img {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 1%;
+ }
 
-    .vertical-menu a {
-        font-size:12px;
-    }
-
-    .footer h3 {
-        font-size: 22px;
-    }
-
-    .left-panel{
-      height:90%;
-    }
+  .navbar a {
+      font-size: 12px;
   }
 
-  /*mobile view*/
-  @media screen and (max-width: 600px) {
-  
-    .outer-grid h1 {
-        font-size: 20px;
-        padding: 1%;
-    }
+  .vertical-menu a {
+      font-size:12px;
+  }
 
-    .inner-grid .img-box {  /* Now if you transform the container ...all items inside shrink too */
-        transform: scale(0.7);  /* not sure if smaller size causes problems with audio control disappearing? */
-       /* zoom:50%;*/  
-     }
+  .footer h3 {
+      font-size: 22px;
+  }
 
-     .inner-grid img {
-      margin-top: 1%;
-      margin-bottom: 1%;
+  .left-panel{
+    height:90%;
+  }
+}
+
+/*mobile view*/
+@media screen and (max-width: 600px) {
+
+  .outer-grid h1 {
+      font-size: 20px;
       padding: 1%;
+  }
+
+  .inner-grid .img-box {  /* Now if you transform the container ...all items inside shrink too */
+      transform: scale(0.7);  /* not sure if smaller size causes problems with audio control disappearing? */
+     /* zoom:50%;*/  
    }
 
-    .navbar a {
-        font-size: 6px;
-    }
+   .inner-grid img {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 1%;
+ }
 
-    .vertical-menu a {
-        font-size:8px;
-    }
+  .navbar a {
+      font-size: 6px;
+  }
 
-    .footer h3 {
-        font-size: 18px;
-    }
-    
-    .left-panel{
-      height:90%;
-    }
-    
-  } 
-   
+  .vertical-menu a {
+      font-size:8px;
+  }
+
+  .footer h3 {
+      font-size: 18px;
+  }
+  
+  .left-panel{
+    height:90%;
+  }
+  
+} 
  

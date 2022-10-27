@@ -4,10 +4,9 @@ body {
 
 }
 
-.padding {
-    color: #242526;
-    padding: 3rem !important;
-    margin-left: 200px
+.card{
+    width: 100%;
+    height: 100%;
 }
 
 .card-img-top{
@@ -28,7 +27,7 @@ body {
     background-image:linear-gradient(black, #242526);
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
-    padding: 1.25rem
+    /*padding: 1.25rem*/
 }
 
 .pro-img {
