@@ -134,4 +134,26 @@ function clearFunc()
   document.getElementById("t8").value="";
 }
 
+//LOGIN
 
+$(document).ready(function() {             
+  $('#loginModal').modal('show');
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+});
+
+function login(){
+  var username= document.getElementById("t1").value;
+  var password= document.getElementById("t2").value;
+
+  if(username==''){
+    alert('Please enter a username');
+  }
+  else if(password==''){
+    alert('Please enter a password');
+  }
+  else{
+    window.location ="home-page.html";
+  }
+}
