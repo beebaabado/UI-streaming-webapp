@@ -1,112 +1,3 @@
-
-function openModal() {
-    var myInput = document.getElementById("psw");
-    var confirmMyInput = document.getElementById("cpsw");
-    var letter = document.getElementById("letter");
-    var number = document.getElementById("number");
-    var length = document.getElementById("length");
-    var match = document.getElementById("match");
-
-
-  myInput.onkeyup = function () {
-
-    var lowerCaseLetters = /[a-z]/g; 
-    var numbers = /[0-9]/g; 
-    var maxLength = 8;
-
-    if (myInput.value.match(lowerCaseLetters)) {
-        letter.classList.remove("invalid");
-        letter.classList.add("valid");
-    } else {
-        letter.classList.remove("valid");
-        letter.classList.add("invalid");
-    }
-
-    if (myInput.value.match(numbers)) {
-        number.classList.remove("invalid");
-        number.classList.add("valid");
-    } else {
-        number.classList.remove("valid");
-        number.classList.add("invalid");
-    }
-
-    if (myInput.value.length <= maxLength) {
-        length.classList.remove("invalid");
-        length.classList.add("valid");
-    } else {
-        length.classList.remove("valid");
-        length.classList.add("invalid");
-    }
-  };
-
-  confirmMyInput.onkeyup = function () {
-    var passEqualsConfPass = (myInput.value ==confirmMyInput.value); 
-    if (passEqualsConfPass) {
-      match.classList.remove("invalid");
-      match.classList.add("valid");
-    } else {
-      match.classList.remove("valid");
-      match.classList.add("invalid");
-    }
-    enableButton(letter, number, length, match);
-  };
-}
-
-  function enableButton(letter, number, length, match) {
-    var button = document.getElementById("my_submit_button");
-    var condition = (letter.classList.contains("valid") && number.classList.contains("valid") && length.classList.contains("valid") && match.classList.contains("valid"));
-    if (condition) {
-      button.disabled = false;
-    }
-  }
-  
-  function registerSubmit() {
-  alert("You're registered!");
-}
-
-
-
-
-  function setCookie(cname,cvalue,exdays) {
-    const d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    let expires = "expires=" + d.toUTCString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-  }
-  
-  function getCookie(cname) {
-    let name = cname + "=";
-    let decodedCookie = decodeURIComponent(document.cookie);
-    let ca = decodedCookie.split(';');
-    for(let i = 0; i < ca.length; i++) {
-      let c = ca[i];
-      while (c.charAt(0) == ' ') {
-        c = c.substring(1);
-      }
-      if (c.indexOf(name) == 0) {
-        return c.substring(name.length, c.length);
-      }
-    }
-    return "";
-  }
-  
-  /*function checkCookie() {
-    let user = getCookie("username");
-    if (user != "") {
-      alert("Welcome again " + user);
-    } else {
-       user = prompt("Please enter your name:","");
-       if (user != "" && user != null) {
-         setCookie("username", user, 30);
-       }
-    }
-  }*/
-
-
-
-
-
-
 //COUNTDOWN
   var countDownDateSamia = new Date("January 27, 2023 00:00:00").getTime();
   var countDownDateInhaler = new Date("February 17, 2023 00:00:00").getTime();
@@ -161,10 +52,108 @@ function openModal() {
   }, 1000);
 
 
+//REGISTRATION
 
+function registration()
+{
 
-//PLAYLISTS AND LIKED SONGS
-  var myPlaylists = []
-  var likedSongs = []
-
+  var username= document.getElementById("t1").value;
+  var password= document.getElementById("t2").value;
+  var confirm_password = document.getElementById("t3").value;
+  var name= document.getElementById("t4").value;
+  var surname= document.getElementById("t5").value;			
+  var email= document.getElementById("t6").value;
+  var dob= document.getElementById("t7").value;
+  var pic= document.getElementById("t8").value;
   
+      //email id expression code
+  var username_expression = /^[a-zA-Z0-9]*$/;
+  var password_expression = /^[a-z0-9]*$/;
+  var letters = /^[A-Za-z]+$/;
+  var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+  if(username==''){
+    alert('Please enter a username');
+  }
+  else if(password==''){
+    alert('Please enter a password');
+  }
+  else if(name==''){
+    alert('Please enter your name');
+  }
+  else if(surname==''){
+    alert('Please enter your surname(s)');
+  }
+  else if(email==''){
+    alert('Please enter your email');
+  }
+  else if(dob==''){
+    alert('Please enter your date of birth');
+  }
+
+  else if(!username_expression.test(name))
+  {
+    alert('Your username must be letters and numbers only!');
+  }
+  else if(!password_expression.test(name))
+  {
+    alert('Your password must be lowercase letters and numbers only!');
+  }
+  else if (!filter.test(email))
+  {
+    alert('Invalid email');
+  }
+  else if(!letters.test(name))
+  {
+    alert('Your name must only include letters.');
+  }
+  else if(document.getElementById("t2").value.length > 8)
+  {
+    alert ('Password maximum length is 8');
+  }
+  else if(password != confirm_password)
+  {
+    alert ('Passwords do not match');
+  }
+  else
+  {				                            
+       alert('You are registered! We are redirecting you to the home page.');
+       // Redirecting to other page or webste code. 
+       window.location = "home-page.html"; 
+  }
+}
+function clearFunc()
+{
+  document.getElementById("t1").value="";
+  document.getElementById("t2").value="";
+  document.getElementById("t3").value="";
+  document.getElementById("t4").value="";
+  document.getElementById("t5").value="";
+  document.getElementById("t6").value="";
+  document.getElementById("t7").value="";
+  document.getElementById("t8").value="";
+}
+
+//LOGIN
+
+$(document).ready(function() {             
+  $('#loginModal').modal('show');
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+});
+
+function login(){
+  var username= document.getElementById("t1").value;
+  var password= document.getElementById("t2").value;
+
+  if(username==''){
+    alert('Please enter a username');
+  }
+  else if(password==''){
+    alert('Please enter a password');
+  }
+  else{
+    window.location ="home-page.html";
+  }
+}

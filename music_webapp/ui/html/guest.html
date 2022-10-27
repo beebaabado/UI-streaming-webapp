@@ -44,10 +44,15 @@
             <div class="logo flex-nav-item-logo-title">
                 <h1 class="logo-title">Media Player</h1>
             </div>
-            <div class="navbar flex-nav-item-menu" >
-                <a href="#LogIn" class="fa  fa-sign-in"  onclick="document.getElementById('id01').style.display='block'"> Login </a>
-                <a href="#myModal" class="fa  fa-sign-in" data-toggle="modal" onclick="openModal()"> Sign Up </a>
-            
+            <div class="navbar flex-nav-item-menu">
+                <div>
+                    <a class="btn btn-info btn-round" href = "login.html">
+                      Login
+                    </button>  
+                    <a class="btn btn-info btn-round" href = "register.html">
+                      Sign Up
+                    </a> 
+                  </div>
             </div>
         </div>
     </nav>    
@@ -74,7 +79,7 @@
                         <div class="section inner-grid scrollx">
                             <div class="img-box">
                                 <div>
-                                    <img src="../img/honey_samia.jpeg" alt="">
+                                    <img class = "countdown-img" src="../img/honey_samia.jpeg" alt="">
                                 </div>
                                 <div class="label">
                                     <h3 class = "name">Honey</h3>
@@ -85,7 +90,7 @@
 
                             <div class="img-box">
                               <div>
-                                  <img src="../img/cuts&bruises_inhaler.jpeg" alt="">
+                                  <img class = "countdown-img"  src="../img/cuts&bruises_inhaler.jpeg" alt="">
                               </div>
                               <div class="label">
                                   <h3 class = "name">Cuts & Bruises</h3>
@@ -96,7 +101,7 @@
 
                             <div class="img-box">
                               <div>
-                                  <img src="../img/crackerisland_gorillaz.jpeg" alt="">
+                                  <img class = "countdown-img" src="../img/crackerisland_gorillaz.jpeg" alt="">
                               </div>
                               <div class="label">
                                   <h3 class = "name">Cracker Island</h3>
@@ -109,220 +114,15 @@
                         </div>
                     </div>
                 </div>
+
     </div>
     <div class="footer">
         <div class="row">
-            <h3><a class="body-button" href=#>Log in. </a> Don't have an account? <a class="body-button" href=#>Sign Up</a></h3>
+            <h3><a class="body-button" href=#>Log in. </a> Don't have an account? <a class="body-button" href="register.html">Sign Up</a></h3>
         </div>
     </div>
 
-    <!-- registration modal --> -->
-    <div id="id01" class="modal">
-      <span onclick="document.getElementById('id01').style.display='none'"
-    class="close" title="Close Modal">&times;</span>
 
-      <!-- Modal Content -->
-      <form class="modal-content animate" action="/action_page.php">
-        <div class="imgcontainer">
-          <img src="https://www.tutorialrepublic.com/examples/images/avatar.png" alt="Avatar" class="avatar">
-        </div>
-
-        <div class="container">
-          <label for="uname"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="uname" required>
-
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
-
-          <button type="submit">Login</button>
-          <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me
-          </label>
-        </div>
-
-        <div class="container" style="background-color:#f1f1f1">
-          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-          <span class="psw">Forgot <a href="#">password?</a></span>
-        </div>
-      </form>
-    </div>
-
-    <div id="myModal" class="modal fade">
-      <div class="modal-dialog modal-login">
-        <div class="modal-content">
-          <div class="modal-header">
-            <div class="avatar">
-              <img
-                src="https://www.tutorialrepublic.com/examples/images/avatar.png"
-                alt="Avatar"
-              />
-            </div>
-            <h4 class="modal-title">Sign Up</h4>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-hidden="true"
-            >
-              &times;
-            </button>
-          </div>
-          <div class="modal-body">
-            
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!----> registration modal -->
-    <div id="myModal" class="modal fade">
-        <div class="modal-dialog modal-login">
-          <div class="modal-content">
-            <div class="modal-header">
-              <div class="avatar">
-                <img
-                  src="https://www.tutorialrepublic.com/examples/images/avatar.png"
-                  alt="Avatar"
-                />
-              </div>
-              <h4 class="modal-title">Sign Up</h4>
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-hidden="true"
-              >
-                &times;
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="form-group">
-                  <input
-                    type="text"
-                    class="form-control"
-                    name="username"
-                    placeholder="Username"
-                    required="required"
-                  />
-              </div>
-              <div class="form-group">
-                  <input
-                    id="psw"
-                    type="password"
-                    class="form-control"
-                    name="password"
-                    placeholder="Password"
-                    required="required"
-                  />
-                </div>
-                <div class="form-group">
-                  <input
-                    id="cpsw"
-                    type="password"
-                    class="form-control"
-                    name="confirm password"
-                    placeholder="Confirm Password"
-                    required="required"
-                  />
-                </div>
-              <div class="form-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  name="firstName"
-                  placeholder="First Name"
-                  required="required"
-                />
-              </div>
-              <div class="form-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  name="lastName"
-                  placeholder="Last Name"
-                  required="required"
-                />
-              </div>
-  
-              <!--add verification of format -- name@domain.extension-->
-              <div class="form-group">
-                  <input
-                    type="email"
-                    class="form-control"
-                    name="email"
-                    placeholder="Email"
-                    required="required"
-                  />
-              </div>
-  
-              <!-- add verification of format -- dd/mm/yyyy -->
-              <div class="form-group">
-                  <input
-                    type="date"
-                    class="form-control"
-                    name="dob"
-                    placeholder="Date of Birth"
-                    required="required"
-                  />
-              </div>
-  
-              <div class="form-group">
-                  <input
-                    type="image"
-                    class="form-control"
-                    name="profile-picture"
-                    placeholder="Profile Picture(Optional)"
-                  />
-              </div>
-              
-  
-              <!--add terms of use and checkbox for read and accepted terms of use, add vailidity -->
-              <div class="form-group">
-                  I have read and accepted the <a href="#terms">Terms of Use</a>.
-                  <input
-                    type="checkbox"
-                    class="form-control"
-                    name="terms-accepted"
-                    placeholder="terms"
-                  />
-              </div>
-  
-              <div class="form-group">
-                <button
-                  id="my_submit_button"
-                  class="btn btn-primary btn-block login-btn"
-                  disabled
-                  onclick = "registerSubmit()"
-                >
-                  Sign Up
-                </button>
-              </div>
-  
-              <div class="form-group">
-                <button
-                  id="delete_button"
-                  type = reset
-                  class="btn btn-primary btn-block login-btn"
-                >
-                  Delete
-                </button>
-            </div>
-              
-  
-            </div>
-            <div class="modal-footer">
-              <div id="message" style="display: block">
-                <h5>Password requirements:</h5>
-                <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
-                <p id="number" class="invalid">A <b>number</b></p>
-                <p id="length" class="invalid">Maximum<b> 8 characters</b></p>
-                <p id="match" class="invalid">
-                  Password and Confirm Password Match
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      
     </body>
 </html>
