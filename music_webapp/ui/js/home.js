@@ -1,112 +1,3 @@
-
-function openModal() {
-    var myInput = document.getElementById("psw");
-    var confirmMyInput = document.getElementById("cpsw");
-    var letter = document.getElementById("letter");
-    var number = document.getElementById("number");
-    var length = document.getElementById("length");
-    var match = document.getElementById("match");
-
-
-  myInput.onkeyup = function () {
-
-    var lowerCaseLetters = /[a-z]/g; 
-    var numbers = /[0-9]/g; 
-    var maxLength = 8;
-
-    if (myInput.value.match(lowerCaseLetters)) {
-        letter.classList.remove("invalid");
-        letter.classList.add("valid");
-    } else {
-        letter.classList.remove("valid");
-        letter.classList.add("invalid");
-    }
-
-    if (myInput.value.match(numbers)) {
-        number.classList.remove("invalid");
-        number.classList.add("valid");
-    } else {
-        number.classList.remove("valid");
-        number.classList.add("invalid");
-    }
-
-    if (myInput.value.length <= maxLength) {
-        length.classList.remove("invalid");
-        length.classList.add("valid");
-    } else {
-        length.classList.remove("valid");
-        length.classList.add("invalid");
-    }
-  };
-
-  confirmMyInput.onkeyup = function () {
-    var passEqualsConfPass = (myInput.value ==confirmMyInput.value); 
-    if (passEqualsConfPass) {
-      match.classList.remove("invalid");
-      match.classList.add("valid");
-    } else {
-      match.classList.remove("valid");
-      match.classList.add("invalid");
-    }
-    enableButton(letter, number, length, match);
-  };
-}
-
-  function enableButton(letter, number, length, match) {
-    var button = document.getElementById("my_submit_button");
-    var condition = (letter.classList.contains("valid") && number.classList.contains("valid") && length.classList.contains("valid") && match.classList.contains("valid"));
-    if (condition) {
-      button.disabled = false;
-    }
-  }
-  
-  function registerSubmit() {
-  alert("You're registered!");
-}
-
-
-
-
-  function setCookie(cname,cvalue,exdays) {
-    const d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    let expires = "expires=" + d.toUTCString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-  }
-  
-  function getCookie(cname) {
-    let name = cname + "=";
-    let decodedCookie = decodeURIComponent(document.cookie);
-    let ca = decodedCookie.split(';');
-    for(let i = 0; i < ca.length; i++) {
-      let c = ca[i];
-      while (c.charAt(0) == ' ') {
-        c = c.substring(1);
-      }
-      if (c.indexOf(name) == 0) {
-        return c.substring(name.length, c.length);
-      }
-    }
-    return "";
-  }
-  
-  /*function checkCookie() {
-    let user = getCookie("username");
-    if (user != "") {
-      alert("Welcome again " + user);
-    } else {
-       user = prompt("Please enter your name:","");
-       if (user != "" && user != null) {
-         setCookie("username", user, 30);
-       }
-    }
-  }*/
-
-
-
-
-
-
 //COUNTDOWN
   var countDownDateSamia = new Date("January 27, 2023 00:00:00").getTime();
   var countDownDateInhaler = new Date("February 17, 2023 00:00:00").getTime();
@@ -161,79 +52,74 @@ function openModal() {
   }, 1000);
 
 
+//REGISTRATION
 
+function registration()
+{
 
-//PLAYLISTS AND LIKED SONGS
-  var myPlaylists = []
-  var likedSongs = []
-
-
-function registration(){
-
-  var name= document.getElementById("t1").value;
-  var email= document.getElementById("t2").value;
-  var uname= document.getElementById("t3").value;
-  var pwd= document.getElementById("t4").value;			
-  var cpwd= document.getElementById("t5").value;
+  var username= document.getElementById("t1").value;
+  var password= document.getElementById("t2").value;
+  var confirm_password = document.getElementById("t3").value;
+  var name= document.getElementById("t4").value;
+  var surname= document.getElementById("t5").value;			
+  var email= document.getElementById("t6").value;
+  var dob= document.getElementById("t7").value;
+  var pic= document.getElementById("t8").value;
   
       //email id expression code
-  var pwd_expression = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/;
+  var username_expression = /^[a-zA-Z0-9]*$/;
+  var password_expression = /^[a-z0-9]*$/;
   var letters = /^[A-Za-z]+$/;
   var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
-  if(name=='')
-  {
+  if(username==''){
+    alert('Please enter a username');
+  }
+  else if(password==''){
+    alert('Please enter a password');
+  }
+  else if(name==''){
     alert('Please enter your name');
   }
-  else if(!letters.test(name))
-  {
-    alert('Name field required only alphabet characters');
+  else if(surname==''){
+    alert('Please enter your surname(s)');
   }
-  else if(email=='')
+  else if(email==''){
+    alert('Please enter your email');
+  }
+  else if(dob==''){
+    alert('Please enter your date of birth');
+  }
+
+  else if(!username_expression.test(name))
   {
-    alert('Please enter your user email id');
+    alert('Your username must be letters and numbers only!');
+  }
+  else if(!password_expression.test(name))
+  {
+    alert('Your password must be lowercase letters and numbers only!');
   }
   else if (!filter.test(email))
   {
     alert('Invalid email');
   }
-  else if(uname=='')
+  else if(!letters.test(name))
   {
-    alert('Please enter the user name.');
+    alert('Your name must only include letters.');
   }
-  else if(!letters.test(uname))
+  else if(document.getElementById("t2").value.length > 8)
   {
-    alert('User name field required only alphabet characters');
+    alert ('Password maximum length is 8');
   }
-  else if(pwd=='')
+  else if(password != confirm_password)
   {
-    alert('Please enter Password');
-  }
-  else if(cpwd=='')
-  {
-    alert('Enter Confirm Password');
-  }
-  else if(!pwd_expression.test(pwd))
-  {
-    alert ('Upper case, Lower case, Special character and Numeric letter are required in Password filed');
-  }
-  else if(pwd != cpwd)
-  {
-    alert ('Password not Matched');
-  }
-  else if(document.getElementById("t5").value.length < 6)
-  {
-    alert ('Password minimum length is 6');
-  }
-  else if(document.getElementById("t5").value.length > 12)
-  {
-    alert ('Password max length is 12');
+    alert ('Passwords do not match');
   }
   else
   {				                            
-             alert('Thank You for Login & You are Redirecting to Campuslife Website');
+       alert('You are registered! We are redirecting you to the home page.');
        // Redirecting to other page or webste code. 
-       window.location = "http://www.campuslife.co.in"; 
+       window.location = "home-page.html"; 
   }
 }
 function clearFunc()
@@ -243,4 +129,9 @@ function clearFunc()
   document.getElementById("t3").value="";
   document.getElementById("t4").value="";
   document.getElementById("t5").value="";
+  document.getElementById("t6").value="";
+  document.getElementById("t7").value="";
+  document.getElementById("t8").value="";
 }
+
+
