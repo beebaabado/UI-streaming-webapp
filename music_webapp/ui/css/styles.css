@@ -1,10 +1,16 @@
 
 
-.body {
+body {
   font-family:  'Trebuchet MS', sans-serif;
   width: 100%;
-  
+  background-color: #242526;
+  height: 100%;
+  min-height:100%;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
 }
+
 
 * {
   box-sizing: border-box;
@@ -25,6 +31,7 @@ one fixed footer */
       'footer footer';
   grid-gap: 0px;
   padding: 0px;
+  min-height:100%;
 }
 
 /* Sticky navigation bar with logo, title and nav menu */
@@ -63,7 +70,7 @@ float:right;
 width:50px;
 height:50px;
 margin-top: 5px;
-margin-right: 5px;
+padding-right: 5%;
 }
 
 
@@ -76,11 +83,7 @@ text-align: right;
 .toggler{
 display: none;
 }
-input {
-opacity: 0;
-pointer-events: none;
-touch-action: none;
-}
+
 .dropdown {
 background-color: black;
 display: none;
@@ -96,6 +99,42 @@ input:checked ~ .dropdown {
 display: flex;
 }
 
+form.search{
+  padding-top:1%;
+}
+
+form.search input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #242526;
+}
+
+/* Style the submit button */
+form.search button {
+
+  width: 4%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.search button:hover {
+  background: #0b7dda;
+}
+
+/* Clear floats */
+form.search::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
 /* set size of flex items in nav container */
 #nav-contianer-top div:nth-of-type(1) {flex-grow: 0;} /*logo*/
@@ -188,7 +227,7 @@ margin-top: 5px;
   height: 10%;
   overflow: hidden; */
   width:100%;
-  height:5%;
+  height:10%;
   background-color: darkred;
   text-align: center;
   position: fixed;
@@ -388,8 +427,8 @@ left: 0;
     overflow-x: hidden;
     overflow-y: auto;
     white-space: nowrap;
-    height: auto; 
 }
+
 
 .outer-grid > h1 {
  width: 100%;
@@ -418,6 +457,10 @@ left: 0;
  overflow-y: hidden;
  white-space: nowrap;
 }
+
+/*.inner-grid.scrollx.guest {
+  top:30%;
+ }*/
 
 
 /* audio control */
@@ -472,7 +515,6 @@ left: 0;
   
 .play-control-overlay {
     display:none;
-    /* visibility:hidden; */
     background-color:darkred;
     padding: 5px;
     border-radius: 25px;
@@ -527,146 +569,6 @@ audio:hover {
 
 .label .countdown {
   color:white;
-}
-
-.modal-login {
-  color: #242526;
-  width: 50%;
-}
-.modal-login .modal-content {
-  color: #242526;
-  padding: 20px;
-  border-radius: 5px;
-  border: none;
-}
-.modal-login .modal-header {
-  border-bottom: none;
-  position: relative;
-  justify-content: center;
-}
-.modal-login h4 {
-  text-align: center;
-  font-size: 26px;
-  margin: 30px 0 -15px;
-}
-.modal-login .form-control:focus {
-  border-color: #70c5c0;
-}
-.modal-login .form-control,
-.modal-login .btn {
-  min-height: 40px;
-  border-radius: 3px;
-}
-.modal-login .close {
-  position: absolute;
-  top: -5px;
-  right: -5px;
-}
-.modal-login .modal-body {
-  color: #242526
-}
-.modal-login .modal-footer {
-  background: #242526;
-  border-color:#242526;
-  text-align: center;
-  justify-content: center;
-  margin: 0 -20px -20px;
-  border-radius: 5px;
-  font-size: 13px;
-}
-.modal-login .modal-footer a {
-  color: #242526;
-}
-.modal-login .avatar {
-  position: absolute;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  top: -70px;
-  width: 95px;
-  height: 95px;
-  border-radius: 50%;
-  z-index: 9;
-  background: orange;
-  padding: 15px;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
-}
-.modal-login .avatar img {
-  width: 100%;
-}
-.modal-login.modal-dialog {
-  margin-top: 80px;
-}
-.modal-login .btn {
-  color: #fff;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: all 0.4s;
-  line-height: normal;
-  border: none;
-}
-.modal-login .btn:hover,
-.modal-login .btn:focus {
-  background: #45aba6;
-  outline: none;
-}
-.trigger-btn {
-  display: inline-block;
-  margin: 100px auto;
-}
-
-/* Style all input fields */
-input {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-}
-
-/* Style the submit button */
-input[type="submit"] {
-  background-color: #4caf50;
-  color: white;
-}
-
-/* The message box is shown when the user clicks on the password field */
-#message {
-  display: none;
-  background: #f1f1f1;
-  color: #000;
-  position: relative;
-  padding: 20px;
-  margin-top: 10px;
-}
-
-#message p {
-  padding: 10px 35px;
-  font-size: 18px;
-}
-
-/* Add a green text color and a checkmark when the requirements are right */
-.valid {
-  color: green;
-}
-
-.valid:before {
-  position: relative;
-  left: -35px;
-  content: "\2713";
-}
-
-/* Add a red text color and an "x" when the requirements are wrong */
-.invalid {
-  color: red;
-}
-
-.invalid:before {
-  position: relative;
-  left: -35px;
-  content: "\00D7";
 }
 
 

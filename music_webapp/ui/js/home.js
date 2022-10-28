@@ -64,7 +64,7 @@ function registration()
   var surname= document.getElementById("t5").value;			
   var email= document.getElementById("t6").value;
   var dob= document.getElementById("t7").value;
-  var pic= document.getElementById("t8").value;
+  var profilepicture= document.getElementById("t8").value;
   
       //email id expression code
   var username_expression = /^[a-zA-Z0-9]*$/;
@@ -118,7 +118,7 @@ function registration()
   else
   {				                            
        alert('You are registered! We are redirecting you to the home page.');
-       // Redirecting to other page or webste code. 
+       // add profile picture assignment
        window.location = "home-page.html"; 
   }
 }
@@ -136,13 +136,6 @@ function clearFunc()
 
 //LOGIN
 
-$(document).ready(function() {             
-  $('#loginModal').modal('show');
-  $(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-  })
-});
-
 function login(){
   var username= document.getElementById("t1").value;
   var password= document.getElementById("t2").value;
@@ -155,5 +148,43 @@ function login(){
   }
   else{
     window.location ="home-page.html";
+  }
+}
+
+
+//COOKIES
+
+function setCookie(cname, cvalue, exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = "expires="+ d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i <ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  let username = getCookie("username");
+  if (username != "") {
+   alert("Welcome again " + username);
+  } else {
+    username = prompt("Please enter your name:", "");
+    if (username != "" && username != null) {
+      setCookie("username", username, 365);
+    }
   }
 }
