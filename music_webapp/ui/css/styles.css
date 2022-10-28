@@ -1,10 +1,16 @@
 
 
-.body {
+body {
   font-family:  'Trebuchet MS', sans-serif;
   width: 100%;
-  
+  background-color: #242526;
+  height: 100%;
+  min-height:100%;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
 }
+
 
 * {
   box-sizing: border-box;
@@ -25,6 +31,7 @@ one fixed footer */
       'footer footer';
   grid-gap: 0px;
   padding: 0px;
+  min-height:100%;
 }
 
 /* Sticky navigation bar with logo, title and nav menu */
@@ -63,7 +70,7 @@ float:right;
 width:50px;
 height:50px;
 margin-top: 5px;
-margin-right: 5px;
+padding-right: 5%;
 }
 
 
@@ -76,11 +83,7 @@ text-align: right;
 .toggler{
 display: none;
 }
-input {
-opacity: 0;
-pointer-events: none;
-touch-action: none;
-}
+
 .dropdown {
 background-color: black;
 display: none;
@@ -96,6 +99,42 @@ input:checked ~ .dropdown {
 display: flex;
 }
 
+form.search{
+  padding-top:1%;
+}
+
+form.search input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #242526;
+}
+
+/* Style the submit button */
+form.search button {
+
+  width: 4%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.search button:hover {
+  background: #0b7dda;
+}
+
+/* Clear floats */
+form.search::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
 /* set size of flex items in nav container */
 #nav-contianer-top div:nth-of-type(1) {flex-grow: 0;} /*logo*/
@@ -475,22 +514,20 @@ left: 0;
 }
   
 .play-control-overlay {
-  position: fixed;
-  bottom: 0;
-    /*display:none;
+    display:none;
     background-color:darkred;
     padding: 5px;
     border-radius: 25px;
     position: absolute;
     top:55%;
-    zoom: 65%; */
+    zoom: 65%; 
 }
       
 .play-control-overlay:active {
     background-color: darkred; 
 }
 
-/*audio{
+audio{
     display: none;
 }
 
@@ -498,7 +535,7 @@ audio:hover {
     display:block;
     transform: scale(1.1);
     filter: drop-shadow(2px 3px 3px #333);
-}*/
+}
 
 .label {
   margin-top: 10px;
