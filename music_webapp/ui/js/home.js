@@ -64,7 +64,7 @@ function registration()
   var surname= document.getElementById("t5").value;			
   var email= document.getElementById("t6").value;
   var dob= document.getElementById("t7").value;
-  var pic= document.getElementById("t8").value;
+  var profilepicture= document.getElementById("t8").value;
   
       //email id expression code
   var username_expression = /^[a-zA-Z0-9]*$/;
@@ -118,7 +118,7 @@ function registration()
   else
   {				                            
        alert('You are registered! We are redirecting you to the home page.');
-       // Redirecting to other page or webste code. 
+       // add profile picture assignment
        window.location = "home-page.html"; 
   }
 }
@@ -135,13 +135,6 @@ function clearFunc()
 }
 
 //LOGIN
-
-$(document).ready(function() {             
-  $('#loginModal').modal('show');
-  $(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-  })
-});
 
 function login(){
   var username= document.getElementById("t1").value;
