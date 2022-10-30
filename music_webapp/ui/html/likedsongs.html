@@ -32,12 +32,64 @@
     <link rel="stylesheet" type="text/css" href="../css/styles.css" />
     <script src="../js/home.js"></script>
     <body>
-        <ul>
-            <li>
-                <div>
-                    
+        <nav>
+            <div id="nav-contianer-top" class="flex-nav-container">
+                <div class="logo flex-nav-item-logo">
+                    <img class="logo-image" src="https://pixy.org/download/5755475/" alt="logo"></div>
+                <div class="logo flex-nav-item-logo-title">
+                    <h1 class="logo-title">Media Player</h1>
                 </div>
-            </li>
-        </ul>
+                <div class="flex-nav-item-search">
+                    <form class="search" action="searchresults.html">
+                        <input type="text" placeholder="Search a song" name="search"/>
+                        <button type="submit">  <i class="fa fa-search"></i></button>
+                      </form>
+                      
+                </div> 
+                <div class="wrapper">
+                    <input class = "toggler" id="toggler" type="checkbox">
+                    <label for="toggler">
+                      <img class="flex-nav-item-profile" src = "https://cdn.icon-icons.com/icons2/1378/PNG/512/avatardefault_92824.png">
+                    </label>
+                    <div class="dropdown">
+                      <a href="account.html">Account</a>
+                      <a href="profile.html">Profile</a>
+                      <a href="#">Log Out</a>
+                    </div>
+                </div>
+                
+            </div>
+        </nav>  
+        
+        
+    
+        <div class=" grid-container">
+                    <div class="left-panel">
+                        <div class="left-panel-interior">
+                            <div class="vertical-menu" id="vertical-menu" >
+                                <div class="space"></div>
+                                <a href="home-page.html" class="active"><i class="fa fa-home"></i>Home</a>
+                                <a href="your-playlists.html"><i class="fa fa-folder"></i>Your Library</a>
+                                <a href="#newplaylist"><i class="fa fa-list"></i>Create Playlist</a>
+                                <!-- <a href=#>Privacy Policy</a>
+                                <a href=#>Cookie Policy</a> -->
+                                <div id="align-bottom">
+                                    <a href=#>Privacy Policy</a>
+                                    <a href=#>Cookie Policy</a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <!-- <div class ="helpful-links">
+                            <a class="appbar-button centered-bottom" href=#>Privacy Policy</a>
+                            <a class="appbar-button centered-bottom" href=#>Cookie Policy</a>
+                        </div> -->
+                    </div>
+                    <div class="right-panel">
+                        <div class="outer-grid scrolly">
+                            
+                        </div>
+                    </div>
+                </div>
     </body>
 </html>
