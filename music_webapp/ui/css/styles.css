@@ -438,7 +438,9 @@ left: 0;
  width: 100%;
  text-align: left;
  margin:0px;
- padding-top:10px;
+ padding-left:2%;
+ padding-top:2%;
+ padding-bottom:1%;
  color: white;
 }
 .inner-grid {
@@ -575,6 +577,15 @@ audio:hover {
   color:white;
 }
 
+.fa-heart-o {
+  color: red;
+  cursor: pointer;
+}
+
+.fa-heart {
+  color: red;
+  cursor: pointer;
+}
 
  /* tablet view */
  @media screen and (max-width: 768px) {
