@@ -217,7 +217,21 @@ function checkCookie() {
   }
 }
 
-//PLAYLIST
+//ADD SONG
+function addSong() {       
+  const liItem = document.createElement('li');
+  const btn = document.createElement('button');
+  //btn.innerHTML =  '&cross;';
+  liItem.innerHTML = document.getElementById("songname").value + " - " + document.getElementById("artistname").value + "&nbsp;&nbsp;"
+  liItem.appendChild(btn);
+  document.getElementById('playlists').appendChild(liItem);
+  document.getElementById("description").setAttribute("placeholder","Add song");
+  //location.reload();
+};
+
+function deleteSong() {
+
+}
 
 
 //LIKE SONG
@@ -226,6 +240,7 @@ $(document).ready(function(){
     if($("#heart").hasClass("liked")){
       $("#heart").html('<i class="fa fa-heart-o" aria-hidden="true"></i>');
       $("#heart").removeClass("liked");
+      addSong()
     }else{
       $("#heart").html('<i class="fa fa-heart" aria-hidden="true"></i>');
       $("#heart").addClass("liked");

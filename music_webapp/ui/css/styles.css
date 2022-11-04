@@ -576,16 +576,14 @@ audio:hover {
 .label .countdown {
   color:white;
 }
-
 .fa-heart-o {
   color: red;
-  cursor: pointer;
 }
 
 .fa-heart {
   color: red;
-  cursor: pointer;
 }
+
 
  /* tablet view */
  @media screen and (max-width: 768px) {
