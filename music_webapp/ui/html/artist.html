@@ -44,7 +44,7 @@
                     <h1 class="logo-title">Media Player</h1>
                 </div>
                 <div class="flex-nav-item-search">
-                    <form class="search" action="searchresults.html"> <!-- change to jQuery search if time -->
+                    <form class="search" action="searchresults.html"> <!-- change to jQuery search if time-->
                         <input type="text" placeholder="Search a song" name="search"/>
                         <button type="submit">  <i class="fa fa-search"></i></button>
                     </form>
@@ -63,7 +63,7 @@
                 </div>
                 
             </div>
-        </nav>  
+        </nav>   
         
         
     
@@ -91,7 +91,7 @@
                     </div>
             <div class="right-panel">
                 <div class="padding">
-                    <div class="col-md-8">
+                    <div>
                         <!-- Column -->
                         <div class="card" style="height:100%;width:100%;"> 
                             <img class="card-img-top" src="https://i.pinimg.com/originals/17/46/4d/17464d7930d8bfd141f012fe4cb0d31c.jpg" alt="Card image cap">
@@ -220,6 +220,14 @@
                     </div>
                 </div>
             </div>
+            <div class="footer">
+                <div class="label-left"><h3 id="song-label">Song Title</h3></div>
+                <audio id="song" controls class="play-control-overlay-footer show-audio"
+                        src="">
+                        Your browser does not support the <code>audio</code> element.
+                </audio>
+            </div>
         </div>
+
     </body>
 </html>

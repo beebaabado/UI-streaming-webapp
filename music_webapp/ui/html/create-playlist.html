@@ -64,6 +64,7 @@
             </div>
         </nav>  
         
+        
     
         <div class=" grid-container">
                     <div class="left-panel">
@@ -89,14 +90,29 @@
                     </div>
                     <div class="right-panel">
                         <div class="outer-grid scrolly">
-                            <h1>Rock</h1>
+                            <div >
+                                <form id="form-add-playlist">
+                                    <div>
+                                        <input type="text" placeholder="New playlist name" id="description" name="description" class="description align-center" minlength="1">
+                                        <input type="button" value="&plus;" class="rounded-corners submit-add-button" onclick="addNewPlayList()" >
+                                    </div>
+                                </form>
+                            </div>
+                            <div>
+                                <ul id="playlists">
+                                        <li>
+                                             My study music playlist
+                                            <button>&cross;</button>
+                                        </li>                                
+                                </ul>
+                            </div>
                             <div class="section">
                                 <ul class="list-group">
-                                    <li class="list-group-item"><i class ="fa fa-play"></i>Just Like Heaven - The Cure <div id = "heart"><i class="fa fa-heart-o" ></i> </div></li>
-                                    <li class="list-group-item"><i class ="fa fa-play"></i>505 - Arctic Monkeys <div id = "heart"><i class="fa fa-heart-o" ></i> </div></li>
-                                    <li class="list-group-item"><i class ="fa fa-play"></i>Layla - Derek and the Dominos <div id = "heart"><i class="fa fa-heart-o" ></i> </div></li>
-                                    <li class="list-group-item"><i class ="fa fa-play"></i>Reptilia - The Strokes <div id = "heart"><i class="fa fa-heart-o"  ></i> </div></li>
-                                    <li class="list-group-item"><i class ="fa fa-play"></i>Trouble - Cage the Elephant <div id = "heart"><i class="fa fa-heart-o" ></i> </div></li>
+                                    <li class="list-group-item"><i class ="fa fa-play"></i>Just Like Heaven - The Cure <div id = heart><i class="fa fa-heart-o" aria-hidden="true" ></i> </div></li>
+                                    <li class="list-group-item"><i class ="fa fa-play"></i>505 - Arctic Monkeys</li>
+                                    <li class="list-group-item"><i class ="fa fa-play"></i>Layla - Derek and the Dominos</li>
+                                    <li class="list-group-item"><i class ="fa fa-play"></i>Reptilia - The Strokes</li>
+                                    <li class="list-group-item"><i class ="fa fa-play"></i>Trouble - Cage the Elephant</li>
                                 </ul>
                             </div>
                         </div>
@@ -105,14 +121,37 @@
             
              <!-- footer -->
              <div class="footer">
-                <div class="label-left"><h3 id="song-label">Song Title</h3></div>
-                <audio id="song" controls class="play-control-overlay-footer show-audio"
-                        src="">
-                        Your browser does not support the <code>audio</code> element.
-                </audio>
+                <div class="row">
+                    <h3>audio controls</h3>
+                </div>
             </div>
             
             
         </body>
        
+</html>
+  </head>
+    <body>
+        <div >
+            <h4>My Playlists</h4>
+            <div >
+                <form id="form-add-playlist">
+                    <div>
+                        <input type="text" placeholder="New playlist" id="description" name="description" class="description align-center" minlength="1">
+                        <input type="button" value="&plus;" class="rounded-corners submit-add-button" onclick="addNewPlayList()" >
+                    </div>
+                </form>
+            </div>
+            <!-- <div id="error" class="hidden">Something went wrong!</div> -->
+            <div>
+                <ul id="playlists">
+                        <li>
+                             My study music playlist
+                            <button>&cross;</button>
+                        </li>                                
+                </ul>
+            </div>
+        </div>
+    </body>
+
 </html>
