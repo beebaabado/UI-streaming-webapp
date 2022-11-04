@@ -52,6 +52,34 @@
   }, 1000);
 
 
+//ON PAGE LOAD 
+
+function checkCookies() {
+  console.log("****called check cookies"); 
+  console.log(document.cookie); 
+  userInfoArray = document.cookie.split(';').map(cookie => cookie.split('=')); 
+  userInfoMap = new Map(); 
+  for (i=0; i<userInfoArray.length; i++) {
+    userInfoMap.set(userInfoArray[i][0].replace(/\s+/g, ''), userInfoArray[i][1]); 
+  }
+  console.log("********************"); 
+  console.log(userInfoMap); 
+  const idToField = new Map(); 
+  idToField.set("username", "t1");
+  idToField.set("password", "t2");
+  idToField.set("name", "t4");
+  idToField.set("surname", "t5");
+  idToField.set("email", "t6");
+  idToField.set("dob", "t7");
+  console.log(idToField);
+  console.log(Array.from(userInfoMap.keys() )); 
+  Array.from(userInfoMap.keys() ).forEach(field => {
+    
+    console.log("in for each loop"); 
+    document.getElementById(idToField.get(field)).value=userInfoMap.get(field);
+  });
+}
+
 //REGISTRATION
 
 function registration()
@@ -116,7 +144,9 @@ function registration()
     alert ('Passwords do not match');
   }
   else
-  {				                            
+  {				
+      accountInfo = [username, name, surname, password, email, dob];
+      setCookies(accountInfo);
        alert('You are registered! We are redirecting you to the home page.');
        // add profile picture assignment
        window.location = "home-page.html"; 
@@ -154,11 +184,11 @@ function login(){
 
 //COOKIES
 
-function setCookie(cname, cvalue, exdays) {
-  const d = new Date();
-  d.setTime(d.getTime() + (exdays*24*60*60*1000));
-  let expires = "expires="+ d.toUTCString();
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+function setCookies(accountInfo) {
+  const fields = ["username", "name", "surname", "password", "email", "dob"]; 
+  for(i=0; i<6; i++) {
+    document.cookie = fields[i].concat("=").concat(accountInfo[i]);
+  }
 }
 
 function getCookie(cname) {
