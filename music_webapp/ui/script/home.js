@@ -3,7 +3,7 @@
   var countDownDateInhaler = new Date("February 17, 2023 00:00:00").getTime();
   var countDownDateGorillaz = new Date("February 24, 2023 00:00:00").getTime();
 
-  // Samia
+  // Samia countdown
   var x = setInterval(function() {
     var now = new Date().getTime();
     var distanceSamia = countDownDateSamia - now;
@@ -19,7 +19,7 @@
     }
   }, 1000);
 
-  // Inhaler
+  // Inhaler countdown
   var x = setInterval(function() {
     var now = new Date().getTime();
     var distanceInhaler = countDownDateInhaler - now;
@@ -35,7 +35,7 @@
     }
   }, 1000);
 
-  // Gorillaz
+  // Gorillaz countdown
   var x = setInterval(function() {
     var now = new Date().getTime();
     var distanceGorillaz = countDownDateGorillaz - now;
@@ -54,16 +54,13 @@
 
 //ON PAGE LOAD 
 
+//checking thecookies that exist, then prefilling page
 function checkCookies() {
-  console.log("****called check cookies"); 
-  console.log(document.cookie); 
   userInfoArray = document.cookie.split(';').map(cookie => cookie.split('=')); 
   userInfoMap = new Map(); 
   for (i=0; i<userInfoArray.length; i++) {
     userInfoMap.set(userInfoArray[i][0].replace(/\s+/g, ''), userInfoArray[i][1]); 
-  }
-  console.log("********************"); 
-  console.log(userInfoMap); 
+  } 
   const idToField = new Map(); 
   idToField.set("username", "t1");
   idToField.set("password", "t2");
@@ -71,16 +68,12 @@ function checkCookies() {
   idToField.set("surname", "t5");
   idToField.set("email", "t6");
   idToField.set("dob", "t7");
-  console.log(idToField);
-  console.log(Array.from(userInfoMap.keys() )); 
   Array.from(userInfoMap.keys() ).forEach(field => {
-    
-    console.log("in for each loop"); 
     document.getElementById(idToField.get(field)).value=userInfoMap.get(field);
   });
 }
 
-//REGISTRATION
+//REGISTRATION for sign up 
 
 function registration()
 {
@@ -184,6 +177,8 @@ function login(){
 
 //COOKIES
 
+
+//setting cookies based on user input
 function setCookies(accountInfo) {
   const fields = ["username", "name", "surname", "password", "email", "dob"]; 
   for(i=0; i<6; i++) {
@@ -191,6 +186,7 @@ function setCookies(accountInfo) {
   }
 }
 
+//getting cookie 
 function getCookie(cname) {
   let name = cname + "=";
   let decodedCookie = decodeURIComponent(document.cookie);
@@ -207,6 +203,8 @@ function getCookie(cname) {
   return "";
 }
 
+
+//checing if cookie exists
 function checkCookie() {
   let username = getCookie("username");
   if (username != "") {
