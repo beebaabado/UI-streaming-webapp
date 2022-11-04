@@ -40,25 +40,31 @@
         <nav>
             <div id="nav-contianer-top" class="flex-nav-container">
                 <div class="logo flex-nav-item-logo">
-                    <img  class="logo-image" src="../img/logo.png" alt="logo"> </div>
+                    <img class="logo-image" src="https://pixy.org/download/5755475/" alt="logo"></div>
                 <div class="logo flex-nav-item-logo-title">
                     <h1 class="logo-title">Media Player</h1>
                 </div>
-    
+                <div class="flex-nav-item-search">
+                    <form class="search" action="searchresults.html"> <!-- change to jQuery search if time-->
+                        <input type="text" placeholder="Search a song" name="search"/>
+                        <button type="submit">  <i class="fa fa-search"></i></button>
+                    </form>
+                      
+                </div> 
                 <div class="wrapper">
                     <input class = "toggler" id="toggler" type="checkbox">
                     <label for="toggler">
-                      <img class="flex-nav-item-profile" src="https://cdn.icon-icons.com/icons2/1378/PNG/512/avatardefault_92824.png" alt="">
+                      <img class="flex-nav-item-profile" src = "https://cdn.icon-icons.com/icons2/1378/PNG/512/avatardefault_92824.png">
                     </label>
                     <div class="dropdown">
                       <a href="account.html">Account</a>
                       <a href="profile.html">Profile</a>
                       <a href="#">Log Out</a>
                     </div>
-                  </div>
+                </div>
                 
             </div>
-        </nav>  
+        </nav>    
         
         <div class=" grid-container">
                     <div class="left-panel">
@@ -86,8 +92,8 @@
                         <div class="outer-grid scrolly" >
                             <div class="col-md-8">
                                 <!-- Column -->
-                                <div class="card" style="height:100%;"> 
-                                    <img class="card-img-top" src="#" alt="Card image cap">
+                                <div class="card" style="height:100%;width:100%;"> 
+                                    <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgXh7j4QKmPhN-s96jtYKA42qHoHy0NMUXG9u4cv9bOlSWMnEx5LDjHet77oaEycIJhac&usqp=CAU" alt="Card image cap">
                                     <div class="card-body little-profile text-center">
                                         <div class="pro-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT42STwjfKg1x3AmsXTwpXHV6DmN-ZfGoJp1A&usqp=CAU" alt="user"></div>
                                         <h3 class="m-b-0">USERNAME</h3>
@@ -116,7 +122,7 @@
                 
                                                 <div class="img-box">
                                                     <div>
-                                                        <img class = "rounded-circle" src="https://i.iheart.com/v3/re/new_assets/5c520f7d390bb14fe1a00aa7?ops=contain(1480,0)" alt="">
+                                                        <img class = "rounded-circle" src="https://i.scdn.co/image/ab6761610000e5eb7d994f7e137c10249de19455" alt="">
                                                     </div>
                                                     <div class="label">
                                                         <h3 class = "name">Cage the Elephant</h3>
@@ -125,28 +131,28 @@
                 
                                                 <div class="img-box">
                                                     <div>
-                                                        <img class = "rounded-circle" src="https://render.fineartamerica.com/images/rendered/default/poster/8/8/break/images/artworkimages/medium/3/black-logo-of-the-strokes-band-ryan-emmanuelle.jpg" alt="">
+                                                        <img class = "rounded-circle" src="https://i.scdn.co/image/ab6761610000e5eb7da39dea0a72f581535fb11f" alt="">
                                                     </div>
                                                     <div class="label">
-                                                        <h3 class = "name">The Strokes</h3>
+                                                        <h3 class = "name">Arctic Monkeys</h3>
                                                     </div>
                                                 </div>
                 
                                                 <div class="img-box">
                                                     <div>
-                                                        <img class = "rounded-circle" src="https://render.fineartamerica.com/images/rendered/default/poster/8/8/break/images/artworkimages/medium/3/black-logo-of-the-strokes-band-ryan-emmanuelle.jpg" alt="">
+                                                        <img class = "rounded-circle" src="https://i.scdn.co/image/a4e10b79a642e9891383448cbf37d7266a6883d6" alt="">
                                                     </div>
                                                     <div class="label">
-                                                        <h3 class = "name">The Strokes</h3>
+                                                        <h3 class = "name">Nirvana</h3>
                                                     </div>
                                                 </div>
                 
                                                 <div class="img-box">
                                                     <div>
-                                                        <img class = "rounded-circle" src="https://render.fineartamerica.com/images/rendered/default/poster/8/8/break/images/artworkimages/medium/3/black-logo-of-the-strokes-band-ryan-emmanuelle.jpg" alt="">
+                                                        <img class = "rounded-circle" src="https://www.spirit-of-rock.com/les%20goupes/T/The%20Beatles/pics/eaf1_2.jpg" alt="">
                                                     </div>
                                                     <div class="label">
-                                                        <h3 class = "name">The Strokes</h3>
+                                                        <h3 class = "name">The Beatles</h3>
                                                     </div>
                                                 </div>
                                             </div>                
@@ -196,67 +202,63 @@
                                             <h1 class="section">Your Playlists</h1><br>
                                             <div class="section inner-grid scrollx">
                                                 <div class="img-box">
-                                                    <div>
-                                                        <img src="https://images.squarespace-cdn.com/content/v1/5eb1ea3236657c794f643121/1590182388401-9CQ3U3GCM8VMNCPZ7CLC/Nyckole-Lopez-ram-jams.jpeg" alt="">
-                                                    </div>
-                                                    <div class="label">
-                                                        <h3 class = "name">The New Abnormal</h3>
-                                                    </div>
+                                                    <a href = "likedsongs.html">
+                                                        <div>
+                                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6b2jSoMbHw5rLKoWaaU9q-34wIasO5cQyGQZexVAbJW0HUCEx" alt="">
+                                                        </div>
+                                                        <div class="label">
+                                                            <h3 class = "name">Liked Songs</h3>
+                                                        </div>
+                                                    </a>
                                                 </div>
                     
                                                 <div class="img-box">
-                                                  <div>
-                                                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Future_Present_Past_EP.jpg/1200px-Future_Present_Past_EP.jpg" alt="">
-                                                  </div>
-                                                  <div class="label">
-                                                      <h3 class = "name">Future Present Past</h3>
-                                                  </div>
-                                                </div>
+                                                    <a href = "playlist.html">
+                                                     <div>
+                                                         <img src="https://img.freepik.com/premium-vector/electric-guitar-icon-bass-player-symbol-music-sign-isolated-white-background_445292-103.jpg" alt="">
+                                                     </div>
+                                                     <div class="label">
+                                                         <h3 class = "name">Rock</h3>
+                                                     </div>
+                                                    </a>
+                                                   </div>
                     
                                                 <div class="img-box">
                                                     <div>
-                                                        <img src="https://m.media-amazon.com/images/I/61JWlz3hnRL._SL1500_.jpg" alt="">
+                                                        <img src="https://thumbs.dreamstime.com/b/%D0%B8%D0%BD%D0%B8%D1%8F-%D0%B7%D0%BD%D0%B0%D1%87%D0%BE%D0%BA-%D1%81%D0%BE%D0%B1%D1%80%D0%B0%D0%BD%D0%B8%D1%8F-%D0%BC%D1%83%D0%B7%D1%8B%D0%BA%D0%B8-illustr-%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF%D0%B0-%D0%BF-%D0%B0%D0%BD%D0%B0-%D1%80%D0%B5%D0%BF%D0%B5%D1%80%D1%82%D1%83%D0%B0%D1%80%D0%B0-90236357.jpg" alt="">
                                                     </div>
                                                     <div class="label">
-                                                        <h3 class = "name">Comedown Machine</h3>
+                                                        <h3 class = "name">Playlist 2</h3>
                                                     </div>
                                                   </div>
                 
                                                 <div class="img-box">
                                                     <div>
-                                                        <img src="https://m.media-amazon.com/images/I/81-wt1kTStL._SL1500_.jpg" alt="">
+                                                        <img src="https://thumbs.dreamstime.com/b/%D0%B8%D0%BD%D0%B8%D1%8F-%D0%B7%D0%BD%D0%B0%D1%87%D0%BE%D0%BA-%D1%81%D0%BE%D0%B1%D1%80%D0%B0%D0%BD%D0%B8%D1%8F-%D0%BC%D1%83%D0%B7%D1%8B%D0%BA%D0%B8-illustr-%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF%D0%B0-%D0%BF-%D0%B0%D0%BD%D0%B0-%D1%80%D0%B5%D0%BF%D0%B5%D1%80%D1%82%D1%83%D0%B0%D1%80%D0%B0-90236357.jpg" alt="">
                                                     </div>
                                                     <div class="label">
-                                                        <h3 class="name">Angles</h3>
+                                                        <h3 class="name">Playlist 3</h3>
                                                     </div>
                                                 </div>
                 
                                                 <div class="img-box">
                                                     <div>
-                                                        <img src="https://static.stereogum.com/uploads/2015/12/The-Strokes-First-Impressions-of-Earth.jpg" alt="">
+                                                        <img src="https://thumbs.dreamstime.com/b/%D0%B8%D0%BD%D0%B8%D1%8F-%D0%B7%D0%BD%D0%B0%D1%87%D0%BE%D0%BA-%D1%81%D0%BE%D0%B1%D1%80%D0%B0%D0%BD%D0%B8%D1%8F-%D0%BC%D1%83%D0%B7%D1%8B%D0%BA%D0%B8-illustr-%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF%D0%B0-%D0%BF-%D0%B0%D0%BD%D0%B0-%D1%80%D0%B5%D0%BF%D0%B5%D1%80%D1%82%D1%83%D0%B0%D1%80%D0%B0-90236357.jpg" alt="">
                                                     </div>
                                                     <div class="label">
-                                                        <h3 class = "name">First Impressions of Earth</h3>
+                                                        <h3 class = "name">Playlist 4</h3>
                                                     </div>
                                                 </div>
                 
                                                 <div class="img-box">
                                                     <div>
-                                                        <img src="https://m.media-amazon.com/images/I/71ZcjUILvdL._SX425_.jpg" alt="">
+                                                        <img src="https://thumbs.dreamstime.com/b/%D0%B8%D0%BD%D0%B8%D1%8F-%D0%B7%D0%BD%D0%B0%D1%87%D0%BE%D0%BA-%D1%81%D0%BE%D0%B1%D1%80%D0%B0%D0%BD%D0%B8%D1%8F-%D0%BC%D1%83%D0%B7%D1%8B%D0%BA%D0%B8-illustr-%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF%D0%B0-%D0%BF-%D0%B0%D0%BD%D0%B0-%D1%80%D0%B5%D0%BF%D0%B5%D1%80%D1%82%D1%83%D0%B0%D1%80%D0%B0-90236357.jpg" alt="">
                                                     </div>
                                                     <div class="label">
-                                                        <h3 class = "name">Room on Fire</h3>
+                                                        <h3 class = "name">Playlist 5</h3>
                                                     </div>
                                                 </div>
-                
-                                                <div class="img-box">
-                                                    <div>
-                                                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e7/The_Strokes_-_Ist_Tis_It_US_cover.png/220px-The_Strokes_-_Ist_Tis_It_US_cover.png" alt="">
-                                                    </div>
-                                                    <div class="label">
-                                                        <h3 class = "name">Is This It</h3>
-                                                    </div>
-                                                </div>
+                       
                     
                                                 
                                             </div>
@@ -269,13 +271,13 @@
 
                 <!-- footer -->
                 <div class="footer">
-                    <div class="row">
-                        <h3>PROFILE PAGE FOOTER</h3>
-                    </div>
+                    <div class="label-left"><h3 id="song-label">Song Title</h3></div>
+                    <audio id="song" controls class="play-control-overlay-footer show-audio"
+                            src="">
+                            Your browser does not support the <code>audio</code> element.
+                    </audio>
                 </div>
         </div>
             
     </body>
-    <footer>
-    </footer>
 </html>

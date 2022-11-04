@@ -30,8 +30,8 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" type="text/css" href="../css/styles.css" />
-    <script src="../script/home.js"></script>
-    <script src="../script/play_control.js"></script>
+    <script src="../js/home.js"></script>
+    <script src="../js/play_control.js"></script>
   </head>
     <body>
     <!-- nav bar parent must be body in order to be sticky using pure CSS -->
@@ -62,8 +62,10 @@
             </div>
             
         </div>
-    </nav>   
+    </nav>  
     
+    
+
     <div class=" grid-container">
                 <div class="left-panel">
                     <div class="left-panel-interior">
@@ -71,7 +73,9 @@
                             <div class="space"></div>
                             <a href="home-page.html" class="active"><i class="fa fa-home"></i>Home</a>
                             <a href="your-playlists.html"><i class="fa fa-folder"></i>Your Library</a>
-                            <a href="#newplaylist"><i class="fa fa-list"></i>Create Playlist</a>
+                            <a href="create-playlist.html"><i class="fa fa-list"></i>Create Playlist</a>
+                            <!-- <a href=#>Privacy Policy</a>
+                            <a href=#>Cookie Policy</a> -->
                             <div id="align-bottom">
                                 <a href=#>Privacy Policy</a>
                                 <a href=#>Cookie Policy</a>
@@ -79,16 +83,19 @@
                         </div>
                         
                     </div>
+                    <!-- <div class ="helpful-links">
+                        <a class="appbar-button centered-bottom" href=#>Privacy Policy</a>
+                        <a class="appbar-button centered-bottom" href=#>Cookie Policy</a>
+                    </div> -->
                 </div>
                 <div class="right-panel">
                     <div class="outer-grid scrolly">
-                        
-                        <h1 class="section">Recently Played</h1>
-                        <div class="inner-grid scrollx">
+                        <h1 class="section"> Recently Played</h1>
+                        <div class="section inner-grid scrollx">
                             <div class="img-box">
-                                <div class="image-container">
-                                    <img src="https://239.d98.mwp.accessdomain.com/wp-content/uploads/2020/12/the-strokes-nuevo-video-the-adults-are-talking-2020.jpeg" alt="" class="image" />
-                                     <div class="play-button-overlay"><img id="1" 
+                                <div>
+                                    <img src="https://239.d98.mwp.accessdomain.com/wp-content/uploads/2020/12/the-strokes-nuevo-video-the-adults-are-talking-2020.jpeg" alt="">
+                                    <div class="play-button-overlay"><img id="1" 
                                         src="../img/play.png" 
                                         data-src="../audio/adultsaretalking.mp3" 
                                         data-title="The Adults are Talking" alt="" 
@@ -96,20 +103,19 @@
                                     </div>
                                 </div>
                                 <div class="label">
-                                    <h3 class = "name">The Adults Are Talking</h3>
-                                    <p class="artist">The Strokes</p>
+                                    <h3 class = "name" id="songname">The Adults Are Talking</h3>
+                                    <p class="artist" id="artistname">The Strokes</p>
                                 </div>
+                                <div id = heart><i class="fa fa-heart-o" aria-hidden="true" ></i> </div>
                             </div>
                     
                             <div class="img-box">
-                                <div class="image-container">
-                                    <img src="https://i.scdn.co/image/ab67616d0000b273ca5279df2beab1992f87803d" alt="" class="image">
-                                     <div class="play-button-overlay"><img id="2" 
-                                        src="../img/play.png" 
-                                        data-src="../audio/badfish.mp3" 
-                                        data-title="Bad Fish" alt="" 
-                                        onclick="play('2');">
-                                    </div>
+                                <div>
+                                    <img src="https://i.scdn.co/image/ab67616d0000b273ca5279df2beab1992f87803d" alt="">
+                                    <audio controls class="play-control-overlay"
+                                        src="../audio/badfish.mp3">
+                                        Your browser does not support the <code>audio</code> element.
+                                    </audio>
                                 </div>
                                 
                                 <div class="label">
@@ -119,32 +125,27 @@
                            </div>
                     
                            <div class="img-box">
-                            <div class="image-container">
+                               <div>
                                    <img src="https://www.quedeletras.com/imagen1.php?cara=nirvana_nirvana_grande.jpg" alt="">
-                                   <div class="play-button-overlay"><img id="3" 
-                                        src="../img/play.png" 
-                                        data-src="../audio/lithium.mp3" 
-                                        data-title="Lithium" alt="" 
-                                        onclick="play('3');">
-                                    </div>
-
+                                    <audio controls  class="play-control-overlay"
+                                    src="../audio/lithium.mp3">
+                                    Your browser does not support the <code>audio</code> element.
+                                    </audio>
                                 </div>
                                 
                                 <div class="label">
-                                    <h3 class = "name">Lithium</h3>
-                                    <p idclass="artist">Nirvana</p>
+                                    <h3 class = "name" >Lithium</h3>
+                                    <p class="artist">Nirvana</p>
                                 </div>
                            </div>
                     
                            <div class="img-box">
-                              <div class="image-container">
+                                <div>
                                     <img src="https://upload.wikimedia.org/wikipedia/en/d/d2/Traveller_%28Chris_Stapleton_album%29.jpg" alt="">
-                                    <div class="play-button-overlay"><img id="4" 
-                                        src="../img/play.png" 
-                                        data-src="../audio/traveller.mp3" 
-                                        data-title="Traveller" alt="" 
-                                        onclick="play('4');">
-                                    </div>
+                                    <audio controls  class="play-control-overlay"
+                                        src="../audio/traveller.mp3">
+                                        Your browser does not support the <code>audio</code> element.
+                                    </audio>
                                 </div>
                                 
                                 <div class="label">
@@ -154,14 +155,12 @@
                            </div>
                     
                            <div class="img-box">
-                                <div class="image-container">
+                                <div>
                                     <img src="https://cdns-images.dzcdn.net/images/cover/6a945aa6ff4d22c911e2cf5d12b026b7/264x264.jpg" alt="">
-                                    <div class="play-button-overlay"><img id="5" 
-                                        src="../img/play.png" 
-                                        data-src="../audio/stillgoindown.mp3" 
-                                        data-title="Still Goin' Down" alt="" 
-                                        onclick="play('5');">
-                                    </div>
+                                    <audio controls  class="play-control-overlay"
+                                        src="../audio/stillgoindown.mp3">
+                                        Your browser does not support the <code>audio</code> element.
+                                    </audio>
                                 </div>
                                 
                                 <div class="label">
@@ -171,17 +170,17 @@
                            </div>
                         </div>
 
+
+
                         <h1 class="section"> Discover</h1>
-                        <div class="inner-grid scrollx">
+                        <div class="inner-grid section scrollx">
                             <div class="img-box">
-                                <div class="image-container">
+                                <div>
                                     <img src="https://cdn.smehost.net/lukecombscom-usnashvilleprod/wp-content/uploads/2019/08/100000x100000-999-1000x1000.jpg" alt="">
-                                    <div class="play-button-overlay"><img id="6" 
-                                        src="../img/play.png" 
-                                        data-src="../audio/houstonwegotaproblem.mp3" 
-                                        data-title="Houston, We Got a Problem" alt="" 
-                                        onclick="play('6');">
-                                    </div>
+                                    <audio controls class="play-control-overlay"
+                                        src="../audio/houstonwegotaproblem.mp3">
+                                        Your browser does not support the <code>audio</code> element.
+                                    </audio>
                                 </div>
                                 
                                 <div class="label">
@@ -191,31 +190,28 @@
                             </div>
                     
                             <div class="img-box">
-                                <div class="image-container">
+                                <div>
                                     <img src="https://akamai.sscdn.co/uploadfile/letras/albuns/6/3/4/a/780111658759237.jpg" alt="">
-                                    <div class="play-button-overlay"><img id="7" 
-                                        src="../img/play.png" 
-                                        data-src="../audio/chateau.mp3" 
-                                        data-title="Chateau (Feel Alright)" alt="" 
-                                        onclick="play('7');">
-                                    </div>
+                                    <audio controls class="play-control-overlay"
+                                        src="../audio/chateau.mp3">
+                                        Your browser does not support the <code>audio</code> element.
+                                    </audio>
                                 </div>
                                 <div class="label">
-                                    <h3 class = "name">Chateau (Feel Alright)</h3>
+                                    <h3 class = "name">Chateau(Feel Alright)</h3>
                                     <p class="artist">Djo</p>
                                 </div>
                            </div>
                     
                            <div class="img-box">
-                                <div class="image-container">
+                                <div>
                                    <img src="https://m.media-amazon.com/images/I/91QOaQBpLnL._SS500_.jpg" alt="">
-                                   <div class="play-button-overlay"><img id="8" 
-                                        src="../img/play.png" 
-                                        data-src="../audio/somethingintheorange.mp3" 
-                                        data-title="Something In The Orange" alt="" 
-                                        onclick="play('8');">
-                                    </div>
+                                    <audio controls  class="play-control-overlay"
+                                    src="../audio/somethingintheorange.mp3">
+                                    Your browser does not support the <code>audio</code> element.
+                                    </audio>
                                 </div>
+                                
                                 <div class="label">
                                     <h3 class = "name">Something In The Orange</h3>
                                     <p class="artist">Zach Bryan</p>
@@ -223,14 +219,12 @@
                            </div>
                     
                            <div class="img-box">
-                               <div class="image-container">
+                               <div>
                                    <img src="https://upload.wikimedia.org/wikipedia/en/c/cc/DirtOnMyBoots.jpg" alt="">
-                                   <div class="play-button-overlay"><img id="9" 
-                                        src="../img/play.png" 
-                                        data-src="../audio/dirtonmyboots.mp3" 
-                                        data-title="Dirt On My Boots" alt="" 
-                                        onclick="play('9');">
-                                    </div>
+                                    <audio controls  class="play-control-overlay"
+                                    src="../audio/dirtonmyboots.mp3">
+                                    Your browser does not support the <code>audio</code> element.
+                                    </audio>
                                 </div>
                                 
                                 <div class="label">
@@ -240,14 +234,12 @@
                            </div>
                     
                            <div class="img-box">
-                               <div class="image-container">
+                               <div>
                                    <img src="https://impact89fm.org/wp-content/uploads/2015/10/gorillaz-900x900.jpg" alt="">
-                                   <div class="play-button-overlay"><img id="10" 
-                                        src="../img/play.png" 
-                                        data-src="../audio/onmelancholyhill.mp3" 
-                                        data-title="On Melancholy Hill" alt="" 
-                                        onclick="play('10');">
-                                    </div>
+                                    <audio controls  class="play-control-overlay"
+                                    src="../audio/onmelancholyhill.mp3">
+                                    Your browser does not support the <code>audio</code> element.
+                                    </audio>
                                 </div>
                                 
                                 <div class="label">
@@ -257,16 +249,14 @@
                            </div>
                         </div>
                         <h1 class="section"> Your Favorites</h1>
-                        <div class="inner-grid scrollx">
+                        <div class="inner-grid section scrollx">
                             <div class="img-box">
-                                <div class="image-container">
+                                <div>
                                     <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Blake_Shelton_%22Happy_Anywhere%22.jpeg/220px-Blake_Shelton_%22Happy_Anywhere%22.jpeg" alt="">
-                                    <div class="play-button-overlay"><img id="11" 
-                                        src="../img/play.png" 
-                                        data-src="../audio/happyanywhere.mp3" 
-                                        data-title="Happy Anywhere" alt="" 
-                                        onclick="play('11');">
-                                    </div>
+                                    <audio controls class="play-control-overlay"
+                                        src="../audio/happyanywhere.mp3">
+                                        Your browser does not support the <code>audio</code> element.
+                                    </audio>
                                 </div>  
                                 <div class="label">
                                     <h3 class = "name">Happy Anywhere</h3>
@@ -275,14 +265,12 @@
                             </div>
                     
                             <div class="img-box">
-                                <div class="image-container">
+                                <div>
                                     <img src="https://musicme.cl/wp-content/uploads/2022/04/ab67616d0000b2737f22337546d61faca55e0f4f.jpg" alt="">
-                                    <div class="play-button-overlay"><img id="12" 
-                                        src="../img/play.png" 
-                                        data-src="../audio/justlikeheaven.mp3" 
-                                        data-title="Just Like Heaven" alt="" 
-                                        onclick="play('12');">
-                                    </div>
+                                    <audio controls class="play-control-overlay"
+                                        src="../audio/justlikeheaven.mp3">
+                                        Your browser does not support the <code>audio</code> element.
+                                    </audio>
                                 </div>
                                 
                                 <div class="label">
@@ -292,14 +280,12 @@
                            </div>
                     
                            <div class="img-box">
-                               <div class="image-container">
+                               <div>
                                    <img src="https://images.genius.com/013b7f21ea2d8c673399e7b704d8f3dd.300x300x1.jpg" alt="">
-                                   <div class="play-button-overlay"><img id="13" 
-                                    src="../img/play.png" 
-                                    data-src="../audio/someotherbar.mp3" 
-                                    data-title="Some Other Bar" alt="" 
-                                    onclick="play('13');">
-                                </div>
+                                    <audio controls  class="play-control-overlay"
+                                    src="../audio/someotherbar.mp3">
+                                    Your browser does not support the <code>audio</code> element.
+                                    </audio>
                                 </div>
                                 
                                 <div class="label">
@@ -309,14 +295,12 @@
                            </div>
                     
                            <div class="img-box">
-                                <div class="image-container">
+                                <div>
                                     <img src="https://m.media-amazon.com/images/I/71Zz5VqPhfL._SS500_.jpg" alt="">
-                                    <div class="play-button-overlay"><img id="14" 
-                                        src="../img/play.png" 
-                                        data-src="../audio/505.mp3" 
-                                        data-title="505" alt="" 
-                                        onclick="play('14');">
-                                    </div>
+                                    <audio controls  class="play-control-overlay"
+                                        src="../audio/505.mp3">
+                                        Your browser does not support the <code>audio</code> element.
+                                    </audio>
                                 </div>
 
                                 <div class="label">
@@ -326,14 +310,12 @@
                            </div>
                     
                            <div class="img-box">
-                               <div class="image-container">
+                               <div>
                                    <img src="https://i1.sndcdn.com/artworks-000137970393-g9zruc-t500x500.jpg" alt="">
-                                   <div class="play-button-overlay"><img id="15" 
-                                    src="../img/play.png" 
-                                    data-src="../audio/newslang.mp3" 
-                                    data-title="New Slang" alt="" 
-                                    onclick="play('15');">
-                                </div>
+                                    <audio controls  class="play-control-overlay"
+                                    src="../audio/newslang.mp3">
+                                    Your browser does not support the <code>audio</code> element.
+                                    </audio>
                                 </div>
                                 
                                 <div class="label">
@@ -346,16 +328,15 @@
                 </div>
             </div>
         
-
-        <div class="footer">
+         <!-- footer -->
+         <div class="footer">
             <div class="label-left"><h3 id="song-label">Song Title</h3></div>
             <audio id="song" controls class="play-control-overlay-footer show-audio"
                     src="">
                     Your browser does not support the <code>audio</code> element.
             </audio>
         </div>
-
-        </div>
+        
         
     </body>
 
