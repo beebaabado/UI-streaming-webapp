@@ -3,7 +3,7 @@
   var countDownDateInhaler = new Date("February 17, 2023 00:00:00").getTime();
   var countDownDateGorillaz = new Date("February 24, 2023 00:00:00").getTime();
 
-  // Samia
+  // Samia countdown
   var x = setInterval(function() {
     var now = new Date().getTime();
     var distanceSamia = countDownDateSamia - now;
@@ -19,7 +19,7 @@
     }
   }, 1000);
 
-  // Inhaler
+  // Inhaler countdown
   var x = setInterval(function() {
     var now = new Date().getTime();
     var distanceInhaler = countDownDateInhaler - now;
@@ -35,7 +35,7 @@
     }
   }, 1000);
 
-  // Gorillaz
+  // Gorillaz countdown
   var x = setInterval(function() {
     var now = new Date().getTime();
     var distanceGorillaz = countDownDateGorillaz - now;
@@ -52,7 +52,28 @@
   }, 1000);
 
 
-//REGISTRATION
+//ON PAGE LOAD 
+
+//checking thecookies that exist, then prefilling page
+function checkCookies() {
+  userInfoArray = document.cookie.split(';').map(cookie => cookie.split('=')); 
+  userInfoMap = new Map(); 
+  for (i=0; i<userInfoArray.length; i++) {
+    userInfoMap.set(userInfoArray[i][0].replace(/\s+/g, ''), userInfoArray[i][1]); 
+  } 
+  const idToField = new Map(); 
+  idToField.set("username", "t1");
+  idToField.set("password", "t2");
+  idToField.set("name", "t4");
+  idToField.set("surname", "t5");
+  idToField.set("email", "t6");
+  idToField.set("dob", "t7");
+  Array.from(userInfoMap.keys() ).forEach(field => {
+    document.getElementById(idToField.get(field)).value=userInfoMap.get(field);
+  });
+}
+
+//REGISTRATION for sign up 
 
 function registration()
 {
@@ -116,7 +137,9 @@ function registration()
     alert ('Passwords do not match');
   }
   else
-  {				                            
+  {				
+      accountInfo = [username, name, surname, password, email, dob];
+      setCookies(accountInfo);
        alert('You are registered! We are redirecting you to the home page.');
        // add profile picture assignment
        window.location = "home-page.html"; 
@@ -154,13 +177,16 @@ function login(){
 
 //COOKIES
 
-function setCookie(cname, cvalue, exdays) {
-  const d = new Date();
-  d.setTime(d.getTime() + (exdays*24*60*60*1000));
-  let expires = "expires="+ d.toUTCString();
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+
+//setting cookies based on user input
+function setCookies(accountInfo) {
+  const fields = ["username", "name", "surname", "password", "email", "dob"]; 
+  for(i=0; i<6; i++) {
+    document.cookie = fields[i].concat("=").concat(accountInfo[i]);
+  }
 }
 
+//getting cookie 
 function getCookie(cname) {
   let name = cname + "=";
   let decodedCookie = decodeURIComponent(document.cookie);
@@ -177,6 +203,8 @@ function getCookie(cname) {
   return "";
 }
 
+
+//checing if cookie exists
 function checkCookie() {
   let username = getCookie("username");
   if (username != "") {
@@ -188,3 +216,19 @@ function checkCookie() {
     }
   }
 }
+
+//PLAYLIST
+
+
+//LIKE SONG
+$(document).ready(function(){
+  $("#heart").click(function(){
+    if($("#heart").hasClass("liked")){
+      $("#heart").html('<i class="fa fa-heart-o" aria-hidden="true"></i>');
+      $("#heart").removeClass("liked");
+    }else{
+      $("#heart").html('<i class="fa fa-heart" aria-hidden="true"></i>');
+      $("#heart").addClass("liked");
+    }
+  });
+});
